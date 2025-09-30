@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useAppContext } from '../context/AppContext'
+import { Overlay } from './Overlay'
 
 // Import all assets
 const imgInfo = "/3a6c87b6e67ec62dc1e13a5769351370c7f3110a.svg"
@@ -27,10 +28,7 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
   return (
     <>
       {/* Overlay */}
-      <div
-        className="fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity"
-        onClick={onClose}
-      />
+      <Overlay isOpen={isOpen} onClick={onClose} zIndex={50} />
 
       {/* Modal */}
       <div className="fixed inset-0 flex items-center justify-center z-50 p-4">

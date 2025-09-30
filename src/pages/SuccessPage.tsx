@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { CandidateList } from '../components/CandidateList'
+import { CandidateLoading } from '../components/CandidateLoading'
 import { Header } from '../components/Header'
 
 // Import all assets
@@ -11,14 +12,20 @@ const imgMockup = "/3db8819fd0a96a562a0eb9fb64ab3faaa9e23f43.png"
 
 export function SuccessPage() {
   const [showCandidates, setShowCandidates] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   
   const handleBrowseCandidates = () => {
-    setShowCandidates(true)
+    setIsLoading(true)
     // Scroll to candidates section
     setTimeout(() => {
       const element = document.getElementById('candidates-section')
       element?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
+  }
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false)
+    setShowCandidates(true)
   }
 
   return (
@@ -139,7 +146,7 @@ export function SuccessPage() {
 
                 {/* Button and Footer */}
                 <div className="flex flex-col gap-3 items-center">
-                  {!showCandidates ? (
+                  {!showCandidates && !isLoading ? (
                     <button
                       onClick={handleBrowseCandidates}
                       className="bg-[#0e0e14] text-white px-6 py-3 rounded flex items-center gap-2 font-bold text-base leading-6"
@@ -149,11 +156,11 @@ export function SuccessPage() {
                       </div>
                       Browse 43 matched candidates
                     </button>
-                  ) : (
+                  ) : showCandidates ? (
                     <div className="text-xs text-[#585d72] leading-[18px] text-center">
                       The best candidates get hired quickly!
                     </div>
-                  )}
+                  ) : null}
                 </div>
               </div>
             </div>
@@ -172,7 +179,11 @@ export function SuccessPage() {
         </div>
       </div>
 
-      {/* Candidates Section */}
+      {/* Loading or Candidates Section */}
+      {isLoading && (
+        <CandidateLoading onLoadingComplete={handleLoadingComplete} />
+      )}
+      
       {showCandidates && (
         <div id="candidates-section" className="border-t border-neutral-100 mt-8">
           <CandidateList />

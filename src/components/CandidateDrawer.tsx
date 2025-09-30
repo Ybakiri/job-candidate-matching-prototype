@@ -2,6 +2,7 @@ import { Candidate } from '../types'
 import { cn } from '../utils/cn'
 import { getAvatarForCandidate, shouldShowTitleIcon } from '../utils/avatars'
 import { Tooltip } from './Tooltip'
+import { Overlay } from './Overlay'
 
 // Import assets from Figma
 const imgClose = "/905f6dd1f7b91e6eac955f99fd1061badc613fcc.svg"
@@ -28,10 +29,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
   return (
     <>
       {/* Overlay */}
-      <div
-        className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300"
-        onClick={onClose}
-      />
+      <Overlay isOpen={isOpen} onClick={onClose} zIndex={40} />
 
       {/* Drawer */}
       <div className="fixed right-0 top-0 h-full w-full lg:w-3/5 bg-white shadow-xl z-50 overflow-hidden flex flex-col animate-slide-in">

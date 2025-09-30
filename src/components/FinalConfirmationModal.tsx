@@ -1,3 +1,5 @@
+import { Overlay } from './Overlay'
+
 // Import assets
 const imgInfo = "/5fa5d4de9a73bf8410be5e2a75547a2c33ae844e.svg"
 
@@ -19,10 +21,7 @@ export function FinalConfirmationModal({ isOpen, onClose, invitedCount }: FinalC
   return (
     <>
       {/* Overlay */}
-      <div
-        className="fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity"
-        onClick={onClose}
-      />
+      <Overlay isOpen={isOpen} onClick={onClose} zIndex={50} />
 
       {/* Modal */}
       <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
