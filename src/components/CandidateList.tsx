@@ -55,7 +55,7 @@ export function CandidateList() {
     <div className="max-w-[1248px] mx-auto px-6 py-8">
         {/* Header */}
         <h1 className="text-2xl font-bold text-[#202333] mb-6">
-          Here are {displayedCandidates.length} of {candidates.length} candidates you should speak to
+          Here are {candidates.length} candidates you should speak to
         </h1>
 
         {/* Instructions */}
