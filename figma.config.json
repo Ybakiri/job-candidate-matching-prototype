@@ -1,0 +1,7 @@
+{
+  "codeConnect": {
+    "include": ["/**/*.{tsx,jsx}"],
+    "label": "React",
+    "interactiveSetupFigmaFileUrl": "https://www.figma.com/design/7OZ7UICMEXAOZ9c10wc6kr/Publication-form?node-id=8462-8051&t=HUxmoNklKFvSuWFK-1"
+  }
+}
