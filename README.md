@@ -187,3 +187,4 @@ VITE_API_URL=your_api_url
 ---
 
 Built with ❤️ using React, TypeScript, and Tailwind CSS// Deployment trigger: Wed Oct  1 17:17:54 CEST 2025
+// Deploy update: Wed Oct  1 17:27:49 CEST 2025
