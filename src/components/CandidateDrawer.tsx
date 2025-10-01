@@ -155,29 +155,35 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
             </div>
 
             {/* Contact Information */}
-            <div className="bg-white rounded p-4 flex flex-col gap-5">
-              <div className="flex gap-1 items-center">
-                <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">Contact information</h3>
-                <div className="w-4 h-4 flex items-center justify-center">
-                  <img alt="" className="block max-w-none w-full h-auto" src={imgLock} />
+            <Tooltip 
+              content="This information is private until the candidate accepts your invitation"
+              position="left"
+              className="w-full"
+            >
+              <div className="bg-white rounded p-4 flex flex-col gap-5">
+                <div className="flex gap-1 items-center">
+                  <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">Contact information</h3>
+                  <div className="w-4 h-4 flex items-center justify-center">
+                    <img alt="" className="block max-w-none w-full h-auto" src={imgLock} />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-5">
+                  <div className="flex items-center">
+                    <span className="text-base font-normal text-[#202333] leading-6 underline blur-sm">
+                      hugo.muller08@gmx.ch
+                    </span>
+                  </div>
+                  <div className="flex gap-3 items-center">
+                    <span className="text-base font-normal text-[#202333] leading-6 underline">
+                      +41
+                    </span>
+                    <span className="text-base font-normal text-[#202333] leading-6 underline blur-sm">
+                      +41 76 123 45 67
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-5">
-                <div className="flex items-center">
-                  <span className="text-base font-normal text-[#202333] leading-6 underline blur-sm">
-                    hugo.muller08@gmx.ch
-                  </span>
-                </div>
-                <div className="flex gap-3 items-center">
-                  <span className="text-base font-normal text-[#202333] leading-6 underline">
-                    +41
-                  </span>
-                  <span className="text-base font-normal text-[#202333] leading-6 underline blur-sm">
-                    +41 76 123 45 67
-                  </span>
-                </div>
-              </div>
-            </div>
+            </Tooltip>
 
             {/* Education */}
             <div className="bg-white rounded p-4 flex flex-col gap-5">

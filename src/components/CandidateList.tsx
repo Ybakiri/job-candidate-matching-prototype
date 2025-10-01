@@ -53,33 +53,36 @@ export function CandidateList() {
 
   return (
     <div className="max-w-[1248px] mx-auto px-6 py-8">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-[#202333] mb-4">
-            {candidates.length} Matches Found
-          </h1>
-          <p className="text-base text-[#585d72] max-w-2xl mx-auto">
-            Our matching algorithm has curated the most relevant candidates for your position. Each profile has been analyzed and ranked.
-          </p>
-        </div>
+        {/* Header and How it works - Horizontal Layout */}
+        <div className="flex gap-8 mb-8">
+          {/* Left Side - Header */}
+          <div className="w-[600px]">
+            <h1 className="text-2xl font-bold text-[#202333] mb-4">
+              {candidates.length} Matches Found
+            </h1>
+            <p className="text-base text-[#585d72]">
+              Our matching algorithm has curated the most relevant candidates for your position. Each profile has been analyzed and ranked.
+            </p>
+          </div>
 
-        {/* How it works */}
-        <div className="bg-white rounded-lg p-6 mb-8 max-w-4xl mx-auto">
-          <h2 className="text-lg font-bold text-[#202333] mb-4">How it works</h2>
-          <ol className="space-y-3">
-            <li className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
-              <span className="text-base text-[#202333]">Check out the profiles that interest you</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
-              <span className="text-base text-[#202333]">Send an invitation to apply for your job posting</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
-              <span className="text-base text-[#202333]">You only pay for those who respond to your invitation</span>
-            </li>
-          </ol>
+          {/* Right Side - How it works */}
+          <div className="bg-white rounded-lg p-6 flex-1">
+            <h2 className="text-lg font-bold text-[#202333] mb-4">How it works</h2>
+            <ol className="space-y-3">
+              <li className="flex items-center gap-3">
+                <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">1</div>
+                <span className="text-base text-[#202333]">Check out the profiles that interest you</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">2</div>
+                <span className="text-base text-[#202333]">Send an invitation to apply for your job posting</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">3</div>
+                <span className="text-base text-[#202333]">You only pay for those who respond to your invitation</span>
+              </li>
+            </ol>
+          </div>
         </div>
 
         {/* Privacy Notice */}

@@ -44,6 +44,11 @@ function appReducer(state: AppState, action: AppAction): AppState {
       return {
         ...state,
         ...action.state,
+        invitedIds: [], // Always start with empty invitedIds
+        candidates: mockCandidates.map(candidate => ({
+          ...candidate,
+          isInvited: false // Reset all candidates to not invited
+        }))
       }
     
     default:
@@ -84,7 +89,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const stateToSave = {
-        invitedIds: state.invitedIds,
         showPricingWarning: state.showPricingWarning,
         filterInvitedOnly: state.filterInvitedOnly,
       }
@@ -92,7 +96,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }, 500) // Debounce localStorage writes
 
     return () => clearTimeout(timeoutId)
-  }, [state.invitedIds, state.showPricingWarning, state.filterInvitedOnly])
+  }, [state.showPricingWarning, state.filterInvitedOnly])
 
   const inviteCandidate = useCallback((candidateId: string) => {
     dispatch({ type: 'INVITE_CANDIDATE', candidateId })

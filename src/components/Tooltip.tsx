@@ -26,7 +26,7 @@ export function Tooltip({ content, children, position = 'top', className = '' }:
 
   return (
     <div 
-      className="relative inline-block"
+      className={`relative ${className.includes('flex-1') ? 'flex-1' : className.includes('w-full') ? 'w-full' : 'inline-block'}`}
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
     >

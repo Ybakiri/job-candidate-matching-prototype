@@ -12,13 +12,11 @@ export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
   const messages = [
     'Searching candidate database...',
     'Analyzing matching profiles...',
-    'Ranking candidates by relevance...',
-    'Finalizing best matches...',
-    'Ready to show candidates!'
+    'Ranking candidates by relevance...'
   ]
 
   useEffect(() => {
-    const duration = 5000 // 5 seconds
+    const duration = 4000 // 5 seconds
     const interval = 50 // Update every 50ms for smooth animation
     const increment = 100 / (duration / interval)
 

@@ -45,14 +45,14 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
             {/* Main Content Box */}
             <div className="border border-[#e6e6ea] rounded p-4 flex flex-col gap-3">
               <p className="text-[14px] text-[#0f204d] leading-[21px]">
-                Each invitation incurs a small fee of <strong>CHF 10.</strong> Only pay for the applicants who answer.
+                Each invitation incurs a small fee of <strong>CHF 40.</strong> Only pay for the applicants who answer.
               </p>
               
               <p className="text-[14px] text-black leading-[21px]">For example:</p>
               
               <ul className="text-[14px] text-black leading-[21px] list-disc ml-[21px]">
-                <li className="mb-0">Send 5 invitations → 5 candidates respond = CHF 50</li>
-                <li className="mb-0">Send 5 invitations → 2 candidates respond = CHF 20</li>
+                <li className="mb-0">Send 5 invitations → 5 candidates respond = CHF 200</li>
+                <li className="mb-0">Send 5 invitations → 2 candidates respond = CHF 80</li>
                 <li>Send 5 invitations → 0 candidates respond = CHF 0</li>
               </ul>
             </div>

@@ -157,25 +157,31 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
             </div>
             
             {/* Contact Information - Right Column */}
-            <div className="flex-1 border border-[#e6e6ea] rounded p-3">
-              <div className="flex items-center gap-1 mb-3">
-                <h4 className="text-base font-bold text-[#202333] leading-6">Contact information</h4>
-                <img alt="" className="w-4 h-auto" src={imgLock} />
-              </div>
-              <div className="flex flex-col gap-2">
-                <div className="flex items-start justify-between">
-                  <span className="text-base font-normal text-[#202333] leading-6">Email</span>
-                  <span className="text-base font-normal text-[#202333] leading-6 blur-sm text-right">john.smithi9@outok.com</span>
+            <Tooltip 
+              content="This information is private until the candidate accepts your invitation"
+              position="top"
+              className="flex-1 w-full"
+            >
+              <div className="w-full border border-[#e6e6ea] rounded p-3">
+                <div className="flex items-center gap-1 mb-3">
+                  <h4 className="text-base font-bold text-[#202333] leading-6">Contact information</h4>
+                  <img alt="" className="w-4 h-auto" src={imgLock} />
                 </div>
-                <div className="flex items-start justify-between">
-                  <span className="text-base font-normal text-[#202333] leading-6">Phone</span>
-                  <div className="flex items-center gap-1">
-                    <span className="text-base font-normal text-[#202333] leading-6">+41</span>
-                    <span className="text-base font-normal text-[#202333] leading-6 blur-sm">78 783 87 87</span>
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-start justify-between">
+                    <span className="text-base font-normal text-[#202333] leading-6">Email</span>
+                    <span className="text-base font-normal text-[#202333] leading-6 blur-sm text-right">john.smithi9@outok.com</span>
+                  </div>
+                  <div className="flex items-start justify-between">
+                    <span className="text-base font-normal text-[#202333] leading-6">Phone</span>
+                    <div className="flex items-center gap-1">
+                      <span className="text-base font-normal text-[#202333] leading-6">+41</span>
+                      <span className="text-base font-normal text-[#202333] leading-6 blur-sm">78 783 87 87</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </Tooltip>
           </div>
         </div>
       </div>
