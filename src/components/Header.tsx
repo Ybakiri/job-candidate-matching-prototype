@@ -15,7 +15,7 @@ interface HeaderProps {
 
 export function Header({ showBackButton = true, backTo = '/', backText = 'Return to job listing' }: HeaderProps) {
   return (
-    <div className="bg-[#202333] h-16 px-6 py-1 flex items-center justify-between">
+    <div className="bg-[#202333] h-[64px] px-[24px] py-[4px] flex items-center justify-between">
       <div className="flex items-center gap-2">
         {showBackButton && (
           <Link to={backTo} className="flex items-center gap-2">
@@ -29,15 +29,15 @@ export function Header({ showBackButton = true, backTo = '/', backText = 'Return
         )}
       </div>
       
-      <div className="flex items-center gap-8">
-        <button className="flex items-center gap-2 px-3 py-1 rounded">
-          <span className="text-[#b8bac3] text-sm font-semibold tracking-tight underline">FR</span>
+      <div className="flex items-center gap-[32px]">
+        <button className="flex items-center gap-2 pl-[12px] pr-[8px] py-[4px]">
+          <span className="text-[#b8bac3] text-[14px] font-semibold tracking-[-0.3px] underline">FR</span>
           <div className="w-6 h-6 flex items-center justify-center">
             <img alt="Language dropdown" className="w-6 h-6" src={imgChevronDown} />
           </div>
         </button>
         
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-[4px]">
           <div className="relative w-10 h-10">
             <div className="absolute inset-0">
               <img alt="" className="block max-w-none size-full" src={imgAvatar} />

@@ -9,6 +9,9 @@ const imgCheckCircle = "/3aa1e8c480fcf31fa45b874c46723385435e08af.svg"
 const imgCheck = "/75ab6d5d9c8916dd03ca2916df956d98b4f0f331.svg"
 const imgEye = "/9c1264132c68b8f06a99feb4fe1a6a7ebc6e88e2.svg"
 const imgMockup = "/3db8819fd0a96a562a0eb9fb64ab3faaa9e23f43.png"
+const imgFrame = "/80cb9368d7522b42a0cf933e2509f5179c673255.svg"
+const imgEmail = "/f4e26e248512c23578fd58708633be39451c208d.svg"
+const imgTipsAndUpdates = "/ef8b096da879f0071dbd6a33c476414f95371821.svg"
 
 export function SuccessPage() {
   const [showCandidates, setShowCandidates] = useState(false)
@@ -51,39 +54,48 @@ export function SuccessPage() {
           </div>
           <Link 
             to="/" 
-            className="px-3 py-[5.5px] rounded text-sm font-semibold text-[#202333] tracking-[-0.3px] leading-[21px] underline text-center whitespace-nowrap"
+            className="px-3 py-[5.5px] text-sm font-semibold text-[#202333] tracking-[-0.3px] leading-[21px] underline text-center whitespace-nowrap"
           >
             Back to job listings
           </Link>
         </div>
 
         {/* Main Section */}
-        <div className="w-full flex flex-col gap-9 items-center">
+        <div className="w-full bg-white rounded-lg p-[24px] flex flex-col gap-[40px] items-center">
           {/* Header */}
           <div className="flex flex-col gap-1 items-center">
             <div className="flex items-center gap-1">
-              <div className="bg-[#d9e2fc] px-2 py-[2px] rounded-[20px] h-5 flex items-center">
-                <span className="text-sm font-semibold text-[#0f204d] tracking-[-0.3px] leading-[21px]">New</span>
-              </div>
-              <span className="text-base font-normal text-[#202333] leading-6">Accelerate your hiring</span>
+              <span className="text-base font-normal text-[#202333] leading-6">While you wait for candidates</span>
             </div>
-            <h1 className="text-[32px] font-bold text-[#202333] leading-[38px] tracking-[-1px] text-center">
-              We've already found the best candidates for you
-            </h1>
+            <div className="flex flex-col gap-2 items-center">
+              <h1 className="text-[28px] font-bold text-[#202333] leading-[34px] tracking-[-1px] text-center">
+                Explore potential applicants
+              </h1>
+              <div className="flex items-center gap-2">
+                <span className="text-base font-normal text-[#202333] leading-6">We have found 43 candidates for your</span>
+                <div className="bg-[#e6f5ee] px-[6px] py-[2px] rounded-lg">
+                  <span className="text-sm font-semibold text-black tracking-[-0.3px] leading-[21px]">Kalkulator*in 80-100%</span>
+                </div>
+                <span className="text-base font-normal text-[#202333] leading-6">position</span>
+              </div>
+            </div>
           </div>
 
           {/* Two Column Layout */}
-          <div className="w-full flex gap-[22px]">
+          <div className="w-full flex gap-[44px] items-start justify-center h-[414px]">
             {/* Left Column - Content */}
-            <div className="flex-1 bg-white rounded-lg p-6">
-              <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-[24px] items-center w-[588px]">
+              <div className="flex flex-col gap-[24px] items-start w-full">
                 {/* Steps */}
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-4">
                   {/* Step 1 */}
-                  <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-1">
-                      <h3 className="text-base font-semibold text-[#202333] leading-6">
-                        1. Invite pre-matched candidates
+                  <div className="flex gap-4 items-start">
+                    <div className="w-6 h-6 shrink-0 overflow-hidden">
+                      <img alt="" className="w-full h-full object-contain" src={imgFrame} />
+                    </div>
+                    <div className="flex-1 flex flex-col gap-1">
+                      <h3 className="text-base font-bold text-[#202333] leading-6">
+                        Invite pre-matched candidates
                       </h3>
                       <p className="text-base text-[#202333] leading-6">
                         Based on your job requirements
@@ -92,10 +104,13 @@ export function SuccessPage() {
                   </div>
 
                   {/* Step 2 */}
-                  <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-1">
-                      <h3 className="text-base font-semibold text-[#202333] leading-6">
-                        2. They receive automatic invitations
+                  <div className="flex gap-4 items-start">
+                    <div className="w-6 h-6 shrink-0 overflow-hidden">
+                      <img alt="" className="w-full h-full object-contain" src={imgEmail} />
+                    </div>
+                    <div className="flex-1 flex flex-col gap-1">
+                      <h3 className="text-base font-bold text-[#202333] leading-6">
+                        They receive automatic invitations
                       </h3>
                       <p className="text-base text-[#202333] leading-6">
                         The candidates see your interest and can apply immediately
@@ -104,10 +119,13 @@ export function SuccessPage() {
                   </div>
 
                   {/* Step 3 */}
-                  <div className="flex flex-col gap-4">
-                    <div className="flex flex-col gap-1">
-                      <h3 className="text-base font-semibold text-[#202333] leading-6">
-                        3. Only pay for what you get
+                  <div className="flex gap-4 items-start">
+                    <div className="w-6 h-6 shrink-0 overflow-hidden">
+                      <img alt="" className="w-full h-full object-contain" src={imgTipsAndUpdates} />
+                    </div>
+                    <div className="flex-1 flex flex-col gap-1">
+                      <h3 className="text-base font-bold text-[#202333] leading-6">
+                        Only pay for what you get
                       </h3>
                       <p className="text-base text-[#202333] leading-6">
                         Transparent per-response pricing, no hidden fees.
@@ -116,14 +134,16 @@ export function SuccessPage() {
                   </div>
                 </div>
 
-                {/* Features Box */}
-                <div className="border border-[#e6e6ea] rounded p-3 flex flex-col gap-3">
+              </div>
+
+              {/* Features Box */}
+              <div className="border border-[#e6e6ea] rounded p-3 flex flex-col gap-3 w-full">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 shrink-0">
                       <img alt="" className="block w-full h-auto" src={imgCheck} />
                     </div>
                     <span className="text-sm text-[#202333] leading-[21px]">
-                      Typically 90% answer rate
+                      90% answer rate typically
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -142,14 +162,14 @@ export function SuccessPage() {
                       Starting from CHF 40.- per response
                     </span>
                   </div>
-                </div>
+              </div>
 
-                {/* Button and Footer */}
-                <div className="flex flex-col gap-3 items-center">
+              {/* Button */}
+              <div className="flex gap-[12px] items-center justify-center w-full">
                   {!showCandidates && !isLoading ? (
                     <button
                       onClick={handleBrowseCandidates}
-                      className="bg-[#0e0e14] text-white px-6 py-3 rounded flex items-center gap-2 font-bold text-base leading-6"
+                      className="flex-1 bg-[#0e0e14] text-white px-[24px] py-[12px] rounded-[4px] flex items-center justify-center gap-2 font-bold text-base leading-6"
                     >
                       <div className="w-6 h-6">
                         <img alt="" className="block max-w-none size-full" src={imgEye} />
@@ -157,20 +177,20 @@ export function SuccessPage() {
                       Browse 43 matched candidates
                     </button>
                   ) : showCandidates ? (
-                    <div className="text-xs text-[#585d72] leading-[18px] text-center">
-                      The best candidates get hired quickly!
+                    <div className="text-center">
+                      <p className="text-base font-medium text-[#202333] mb-1">Ready to hire?</p>
+                      <p className="text-xs text-[#585d72] leading-[18px]">The best candidates get hired quickly!</p>
                     </div>
                   ) : null}
-                </div>
               </div>
             </div>
 
             {/* Right Column - Mockup */}
-            <div className="flex-1 bg-[#fbf5fc] rounded-lg p-6 h-[482px] flex items-center justify-center">
-              <div className="w-[463px] h-[434px] overflow-hidden relative">
+            <div className="bg-[#fbf5fc] rounded-lg p-[24px] w-[482px] flex items-center justify-center">
+              <div className="w-[413px] h-[339px] relative">
                 <img 
                   alt="Candidate mockup" 
-                  className="absolute -left-[17px] top-[13px] w-[495px] h-[405px] max-w-none" 
+                  className="absolute inset-0 max-w-none size-full" 
                   src={imgMockup} 
                 />
               </div>

@@ -67,7 +67,7 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
               <p className="text-[14px] text-black leading-[21px] font-bold tracking-[-0.3px]">
                 No answer, no charge.{' '}
                 <span className="font-normal">
-                  You won't be charged if the applicant doesn't answer in the{' '}
+                  You won't be charged if the applicant doesn't answer{' '}
                 </span>
                 <span className="font-normal">until your job ad expires.</span>
               </p>

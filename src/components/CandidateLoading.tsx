@@ -55,22 +55,9 @@ export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
 
         {/* Progress Section */}
         <div className="mb-8 bg-white rounded-lg border border-[#e6e6ea] p-6">
-          <div className="flex items-center gap-4 mb-4">
+          <div className="flex items-center gap-4">
             <div className="w-8 h-8 border-4 border-[#0e0e14] border-t-transparent rounded-full animate-spin" />
             <span className="text-lg font-semibold text-[#202333]">{currentMessage}</span>
-          </div>
-          
-          {/* Progress Bar */}
-          <div className="w-full bg-gray-200 rounded-full h-3 mb-2">
-            <div 
-              className="bg-gradient-to-r from-[#0e0e14] to-[#4f46e5] h-3 rounded-full transition-all duration-100 ease-out"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          
-          <div className="flex justify-between text-sm text-[#585d72]">
-            <span>Finding the best matches for your position</span>
-            <span>{Math.round(progress)}%</span>
           </div>
         </div>
 

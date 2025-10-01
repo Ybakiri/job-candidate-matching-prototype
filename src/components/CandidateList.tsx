@@ -54,16 +54,33 @@ export function CandidateList() {
   return (
     <div className="max-w-[1248px] mx-auto px-6 py-8">
         {/* Header */}
-        <h1 className="text-2xl font-bold text-[#202333] mb-6">
-          Here are {candidates.length} candidates you should speak to
-        </h1>
+        <div className="text-center mb-8">
+          <h1 className="text-2xl font-bold text-[#202333] mb-4">
+            {candidates.length} Matches Found
+          </h1>
+          <p className="text-base text-[#585d72] max-w-2xl mx-auto">
+            Our matching algorithm has curated the most relevant candidates for your position. Each profile has been analyzed and ranked.
+          </p>
+        </div>
 
-        {/* Instructions */}
-        <ol className="list-decimal list-inside mb-6 space-y-1 text-[#202333]">
-          <li>Check out the profiles that interest you</li>
-          <li>Send an invitation to apply for your job posting</li>
-          <li>You only pay for those who respond to your invitation</li>
-        </ol>
+        {/* How it works */}
+        <div className="bg-white rounded-lg p-6 mb-8 max-w-4xl mx-auto">
+          <h2 className="text-lg font-bold text-[#202333] mb-4">How it works</h2>
+          <ol className="space-y-3">
+            <li className="flex items-center gap-3">
+              <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+              <span className="text-base text-[#202333]">Check out the profiles that interest you</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+              <span className="text-base text-[#202333]">Send an invitation to apply for your job posting</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+              <span className="text-base text-[#202333]">You only pay for those who respond to your invitation</span>
+            </li>
+          </ol>
+        </div>
 
         {/* Privacy Notice */}
         {showPrivacyBanner && (
