@@ -5,14 +5,14 @@ interface CandidateLoadingProps {
   onLoadingComplete: () => void
 }
 
-export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
-  const [currentMessage, setCurrentMessage] = useState('Searching candidate database...')
+const messages = [
+  'Searching candidate database...',
+  'Analyzing matching profiles...',
+  'Ranking candidates by relevance...'
+]
 
-  const messages = [
-    'Searching candidate database...',
-    'Analyzing matching profiles...',
-    'Ranking candidates by relevance...'
-  ]
+export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
+  const [currentMessage, setCurrentMessage] = useState(messages[0])
 
   useEffect(() => {
     const duration = 4000 // 4 seconds total
@@ -35,7 +35,7 @@ export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
       clearInterval(messageTimer)
       clearTimeout(completeTimer)
     }
-  }, [onLoadingComplete, messages])
+  }, [onLoadingComplete])
 
   return (
     <div id="candidates-section" className="border-t border-neutral-100 mt-8">
