@@ -6,7 +6,6 @@ interface CandidateLoadingProps {
 }
 
 export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
-  const [progress, setProgress] = useState(0)
   const [currentMessage, setCurrentMessage] = useState('Searching candidate database...')
 
   const messages = [
@@ -16,31 +15,26 @@ export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
   ]
 
   useEffect(() => {
-    const duration = 4000 // 5 seconds
-    const interval = 50 // Update every 50ms for smooth animation
-    const increment = 100 / (duration / interval)
+    const duration = 4000 // 4 seconds total
+    const messageInterval = duration / messages.length
+    let currentIndex = 0
 
-    const timer = setInterval(() => {
-      setProgress(prev => {
-        const newProgress = prev + increment
-        
-        // Update message based on progress
-        const messageIndex = Math.min(Math.floor((newProgress / 100) * messages.length), messages.length - 1)
-        setCurrentMessage(messages[messageIndex])
-        
-        if (newProgress >= 100) {
-          clearInterval(timer)
-          setTimeout(() => {
-            onLoadingComplete()
-          }, 200) // Small delay before showing actual content
-          return 100
-        }
-        
-        return newProgress
-      })
-    }, interval)
+    // Update message periodically
+    const messageTimer = setInterval(() => {
+      currentIndex = (currentIndex + 1) % messages.length
+      setCurrentMessage(messages[currentIndex])
+    }, messageInterval)
 
-    return () => clearInterval(timer)
+    // Complete loading after duration
+    const completeTimer = setTimeout(() => {
+      clearInterval(messageTimer)
+      onLoadingComplete()
+    }, duration)
+
+    return () => {
+      clearInterval(messageTimer)
+      clearTimeout(completeTimer)
+    }
   }, [onLoadingComplete, messages])
 
   return (
