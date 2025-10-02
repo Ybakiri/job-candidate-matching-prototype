@@ -167,7 +167,7 @@ export function SuccessPage() {
                       onClick={handleBrowseCandidates}
                       className="flex-1 bg-[#0e0e14] text-white px-[24px] py-[12px] rounded-[4px] flex items-center justify-center gap-2 font-bold text-base leading-6"
                     >
-                      <img alt="" className="w-5 h-5 shrink-0" src={imgEye} />
+                      <img alt="" className="w-6 h-6 shrink-0" src={imgEye} />
                       {t('buttons.browseCandidate')}
                     </button>
                   ) : showCandidates ? (

@@ -116,7 +116,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                     className="bg-[#0e0e14] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2"
                   >
                     <div className="w-6 h-6 flex items-center justify-center">
-                      <img alt="" className="w-4 h-4 shrink-0" src={imgSend} />
+                      <img alt="" className="w-6 h-6 shrink-0" src={imgSend} />
                     </div>
                     <span className="text-base font-bold leading-6">Invite to unlock</span>
                   </button>
@@ -217,7 +217,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                 <div className="flex items-center justify-between">
                   <div className="flex gap-2 items-center">
                     <div className="w-6 h-6 flex items-center justify-center">
-                      <img alt="" className="w-4 h-4 shrink-0" src={imgUpgrade} />
+                      <img alt="" className="w-6 h-6 shrink-0" src={imgUpgrade} />
                     </div>
                     <span className="text-sm font-normal text-[#2141a1] leading-4">
                       AI generated, review information on your own.

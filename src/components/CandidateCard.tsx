@@ -92,7 +92,7 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                   }}
                   className="bg-[#0e0e14] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2 hover:bg-[#1a1a1a] transition-colors duration-200"
                 >
-                  <img alt="" className="w-4 h-4 shrink-0" src={imgSend} />
+                  <img alt="" className="w-6 h-6 shrink-0" src={imgSend} />
                   <span className="text-base font-bold leading-6">{t('buttons.inviteToUnlock')}</span>
                 </button>
               )}
@@ -104,7 +104,7 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                 }}
                 className="w-12 h-12 p-3 border border-[#989ba8] rounded flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
               >
-                <img alt="View details" className="w-4 h-4 shrink-0" src={imgEye} />
+                <img alt="View details" className="w-6 h-6 shrink-0" src={imgEye} />
               </button>
             </div>
           </div>
