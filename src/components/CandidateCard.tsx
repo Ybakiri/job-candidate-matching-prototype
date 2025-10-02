@@ -81,7 +81,7 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                   disabled
                   className="bg-[#9ED7BE] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2 cursor-not-allowed"
                 >
-                  <img alt="" className="w-6 h-auto" src={imgCheckWhite} style={{filter: 'brightness(0) invert(1)'}} />
+                  <img alt="" className="w-4 h-4 shrink-0" src={imgCheckWhite} style={{filter: 'brightness(0) invert(1)'}} />
                   <span className="text-base font-bold leading-6">{t('buttons.invited')}</span>
                 </button>
               ) : (
@@ -92,7 +92,7 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                   }}
                   className="bg-[#0e0e14] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2 hover:bg-[#1a1a1a] transition-colors duration-200"
                 >
-                  <img alt="" className="w-6 h-auto" src={imgSend} />
+                  <img alt="" className="w-4 h-4 shrink-0" src={imgSend} />
                   <span className="text-base font-bold leading-6">{t('buttons.inviteToUnlock')}</span>
                 </button>
               )}
@@ -104,7 +104,7 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                 }}
                 className="w-12 h-12 p-3 border border-[#989ba8] rounded flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
               >
-                <img alt="View details" className="w-6 h-auto" src={imgEye} />
+                <img alt="View details" className="w-4 h-4 shrink-0" src={imgEye} />
               </button>
             </div>
           </div>
@@ -119,7 +119,7 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                 key={index}
                 className="h-7 px-3 py-[5.5px] rounded-[40px] flex items-center gap-2 bg-[#e6f5ee]"
               >
-                <img alt="" className="w-6 h-auto" src={imgCheck} />
+                <img alt="" className="w-4 h-4 shrink-0" src={imgCheck} />
                 <span className="text-sm font-semibold text-[#202333] tracking-[-0.3px] leading-[21px]">
                   {skill.name}
                 </span>
