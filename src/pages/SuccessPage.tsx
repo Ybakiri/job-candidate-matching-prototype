@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { CandidateList } from '../components/CandidateList'
 import { CandidateLoading } from '../components/CandidateLoading'
 import { Header } from '../components/Header'
+import { useTranslation } from '../context/LanguageContext'
 
 // Import all assets
 const imgCheckCircle = "/3aa1e8c480fcf31fa45b874c46723385435e08af.svg"
@@ -14,6 +15,7 @@ const imgEmail = "/f4e26e248512c23578fd58708633be39451c208d.svg"
 const imgTipsAndUpdates = "/ef8b096da879f0071dbd6a33c476414f95371821.svg"
 
 export function SuccessPage() {
+  const { t } = useTranslation()
   const [showCandidates, setShowCandidates] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   
@@ -45,10 +47,10 @@ export function SuccessPage() {
             </div>
             <div className="flex-1">
               <h3 className="text-sm font-bold text-[#202333] tracking-[-0.3px] leading-[21px] mb-1">
-                Your ad will be online soon
+                {t('success.title')}
               </h3>
               <p className="text-sm font-normal text-[#202333] leading-[21px]">
-                You have successfully booked one of our products for your job advertisement. Please check your inbox for more information.
+                {t('success.description')}
               </p>
             </div>
           </div>
@@ -56,7 +58,7 @@ export function SuccessPage() {
             to="/" 
             className="px-3 py-[5.5px] text-sm font-semibold text-[#202333] tracking-[-0.3px] leading-[21px] underline text-center whitespace-nowrap"
           >
-            Back to job listings
+            {t('navigation.backToJobListings')}
           </Link>
         </div>
 
@@ -65,18 +67,18 @@ export function SuccessPage() {
           {/* Header */}
           <div className="flex flex-col gap-1 items-center">
             <div className="flex items-center gap-1">
-              <span className="text-base font-normal text-[#202333] leading-6">While you wait for candidates</span>
+              <span className="text-base font-normal text-[#202333] leading-6">{t('success.whileYouWait')}</span>
             </div>
             <div className="flex flex-col gap-2 items-center">
               <h1 className="text-[28px] font-bold text-[#202333] leading-[34px] tracking-[-1px] text-center">
-                Explore potential applicants
+                {t('success.exploreApplicants')}
               </h1>
               <div className="flex items-center gap-2">
-                <span className="text-base font-normal text-[#202333] leading-6">We have found 43 candidates for your</span>
+                <span className="text-base font-normal text-[#202333] leading-6">{t('success.candidatesFound')}</span>
                 <div className="bg-[#e6f5ee] px-[6px] py-[2px] rounded-lg">
-                  <span className="text-sm font-semibold text-black tracking-[-0.3px] leading-[21px]">Kalkulator*in 80-100%</span>
+                  <span className="text-sm font-semibold text-black tracking-[-0.3px] leading-[21px]">{t('success.jobTitle')}</span>
                 </div>
-                <span className="text-base font-normal text-[#202333] leading-6">position</span>
+                <span className="text-base font-normal text-[#202333] leading-6">{t('success.position')}</span>
               </div>
             </div>
           </div>
@@ -95,10 +97,10 @@ export function SuccessPage() {
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
-                        Invite pre-matched candidates
+                        {t('howItWorks.step1Title')}
                       </h3>
                       <p className="text-base text-[#202333] leading-6">
-                        Based on your job requirements
+                        {t('howItWorks.step1Description')}
                       </p>
                     </div>
                   </div>
@@ -110,10 +112,10 @@ export function SuccessPage() {
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
-                        They receive automatic invitations
+                        {t('howItWorks.step2Title')}
                       </h3>
                       <p className="text-base text-[#202333] leading-6">
-                        The candidates see your interest and can apply immediately
+                        {t('howItWorks.step2Description')}
                       </p>
                     </div>
                   </div>
@@ -125,10 +127,10 @@ export function SuccessPage() {
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
-                        Only pay for what you get
+                        {t('howItWorks.step3Title')}
                       </h3>
                       <p className="text-base text-[#202333] leading-6">
-                        Transparent per-response pricing, no hidden fees.
+                        {t('howItWorks.step3Description')}
                       </p>
                     </div>
                   </div>
@@ -143,7 +145,7 @@ export function SuccessPage() {
                       <img alt="" className="block w-full h-auto" src={imgCheck} />
                     </div>
                     <span className="text-sm text-[#202333] leading-[21px]">
-                      90% answer rate typically
+                      {t('features.answerRate')}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -151,7 +153,7 @@ export function SuccessPage() {
                       <img alt="" className="block w-full h-auto" src={imgCheck} />
                     </div>
                     <span className="text-sm text-[#202333] leading-[21px]">
-                      Candidates answer within a few hours
+                      {t('features.responseTime')}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -159,7 +161,7 @@ export function SuccessPage() {
                       <img alt="" className="block w-full h-auto" src={imgCheck} />
                     </div>
                     <span className="text-sm text-[#202333] leading-[21px]">
-                      Starting from CHF 40.- per response
+                      {t('features.pricing')}
                     </span>
                   </div>
               </div>
@@ -174,12 +176,12 @@ export function SuccessPage() {
                       <div className="w-6 h-6">
                         <img alt="" className="block max-w-none size-full" src={imgEye} />
                       </div>
-                      Browse 43 matched candidates
+                      {t('buttons.browseCandidate')}
                     </button>
                   ) : showCandidates ? (
                     <div className="text-center">
-                      <p className="text-base font-medium text-[#202333] mb-1">Ready to hire?</p>
-                      <p className="text-xs text-[#585d72] leading-[18px]">The best candidates get hired quickly!</p>
+                      <p className="text-base font-medium text-[#202333] mb-1">{t('candidates.readyToHire')}</p>
+                      <p className="text-xs text-[#585d72] leading-[18px]">{t('candidates.bestCandidates')}</p>
                     </div>
                   ) : null}
               </div>

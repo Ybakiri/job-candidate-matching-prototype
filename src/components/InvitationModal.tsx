@@ -31,7 +31,7 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
       <Overlay isOpen={isOpen} onClick={onClose} zIndex={50} />
 
       {/* Modal */}
-      <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
+      <div className="fixed inset-0 flex items-center justify-center z-50 p-4" onClick={onClose}>
         <div className="bg-white rounded w-[604px] shadow-xl flex flex-col overflow-clip" onClick={e => e.stopPropagation()}>
           {/* Header */}
           <div className="bg-white px-6 pt-6 pb-2">

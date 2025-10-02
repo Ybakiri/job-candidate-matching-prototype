@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "backToJobListing": "Zurück zur Stellenausschreibung",
+    "backToJobListings": "Zurück zu den Stellenausschreibungen"
+  },
+  "success": {
+    "title": "Ihre Anzeige wird bald online sein",
+    "description": "Sie haben erfolgreich eines unserer Produkte für Ihre Stellenausschreibung gebucht. Bitte überprüfen Sie Ihr Postfach für weitere Informationen.",
+    "whileYouWait": "Während Sie auf Kandidaten warten",
+    "exploreApplicants": "Potenzielle Bewerber erkunden",
+    "candidatesFound": "Wir haben 43 Kandidaten für Ihre",
+    "position": "Position gefunden",
+    "jobTitle": "Kalkulator*in 80-100%"
+  },
+  "howItWorks": {
+    "title": "So funktioniert es",
+    "step1Title": "Vorab passende Kandidaten einladen",
+    "step1Description": "Basierend auf Ihren Stellenanforderungen",
+    "step2Title": "Sie erhalten automatische Einladungen",
+    "step2Description": "Die Kandidaten sehen Ihr Interesse und können sich sofort bewerben",
+    "step3Title": "Nur für das bezahlen, was Sie bekommen",
+    "step3Description": "Transparente Preise pro Antwort, keine versteckten Gebühren."
+  },
+  "features": {
+    "answerRate": "Normalerweise 90% Antwortrate",
+    "responseTime": "Kandidaten antworten innerhalb weniger Stunden",
+    "pricing": "Ab CHF 40.- pro Antwort"
+  },
+  "buttons": {
+    "browseCandidate": "43 passende Kandidaten durchsuchen",
+    "inviteToUnlock": "Einladen zum Entsperren",
+    "invited": "Eingeladen zum Entsperren",
+    "viewDetails": "Details anzeigen",
+    "confirmInvitation": "Einladung bestätigen",
+    "cancel": "Abbrechen",
+    "continueBrowsing": "Weiter durchsuchen",
+    "finishAndView": "Beenden und Stellenanzeige anzeigen",
+    "showMore": "Mehr anzeigen ({count} verbleibend)"
+  },
+  "candidates": {
+    "matchesFound": "{count} Treffer gefunden",
+    "description": "Unser Matching-Algorithmus hat die relevantesten Kandidaten für Ihre Position ausgewählt. Jedes Profil wurde analysiert und bewertet.",
+    "loadingTitle": "Lade Ihre passenden Kandidaten...",
+    "readyToHire": "Bereit zu einstellen?",
+    "bestCandidates": "Die besten Kandidaten werden schnell eingestellt!",
+    "contactInfo": "Kontaktinformationen",
+    "education": "Bildung",
+    "pastExperiences": "Berufserfahrung",
+    "showInvitedOnly": "Nur eingeladene Kandidaten anzeigen",
+    "profiles": "Kandidatenprofile",
+    "yearsExperience": "{years} Jahre Erfahrung"
+  },
+  "loading": {
+    "searching": "Durchsuche Kandidatendatenbank...",
+    "analyzing": "Analysiere passende Profile...",
+    "ranking": "Bewerte Kandidaten nach Relevanz..."
+  },
+  "modal": {
+    "confirmTitle": "Einladung & Kosten bestätigen",
+    "costDescription": "Jede Einladung verursacht eine kleine Gebühr von CHF 40. Zahlen Sie nur für Bewerber, die antworten.",
+    "example": "Zum Beispiel:",
+    "example1": "5 Einladungen senden → 5 Kandidaten antworten = CHF 200",
+    "example2": "5 Einladungen senden → 2 Kandidaten antworten = CHF 80",
+    "example3": "5 Einladungen senden → 0 Kandidaten antworten = CHF 0",
+    "noAnswerNoCharge": "Keine Antwort, keine Gebühr.",
+    "noChargeDescription": "Sie werden nicht belastet, wenn der Bewerber nicht antwortet, bis Ihre Stellenanzeige abläuft.",
+    "dontShowAgain": "Nicht mehr anzeigen",
+    "finishTitle": "Sind Sie bereit abzuschließen?",
+    "finishDescription": "Sie haben {count} Kandidaten eingeladen, sich für Ihre Position zu bewerben.",
+    "finishWarning": "Sobald Sie diese Seite verlassen, können Sie nicht mehr zurückkehren, um weitere Kandidaten einzuladen.",
+    "finishReminder": "Stellen Sie sicher, dass Sie alle Kandidaten eingeladen haben, die Sie interessieren, bevor Sie abschließen."
+  },
+  "privacy": {
+    "title": "Wir respektieren die Privatsphäre der Kandidaten.",
+    "description": "Kontaktdaten werden erst nach Annahme Ihrer Einladung durch die Kandidaten geteilt, um Vertrauen zu erhalten und Datenschutzbestimmungen einzuhalten.",
+    "contactTooltip": "Diese Informationen sind privat, bis der Kandidat Ihre Einladung annimmt",
+    "dismiss": "Verwerfen"
+  }
+}

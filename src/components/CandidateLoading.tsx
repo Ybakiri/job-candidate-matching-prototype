@@ -1,17 +1,21 @@
 import { useState, useEffect } from 'react'
 import { SkeletonCandidateCard } from './SkeletonCandidateCard'
+import { useTranslation } from '../context/LanguageContext'
 
 interface CandidateLoadingProps {
   onLoadingComplete: () => void
 }
 
-const messages = [
-  'Searching candidate database...',
-  'Analyzing matching profiles...',
-  'Ranking candidates by relevance...'
-]
 
 export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
+  const { t } = useTranslation()
+  
+  const messages = [
+    t('loading.searching'),
+    t('loading.analyzing'),
+    t('loading.ranking')
+  ]
+  
   const [currentMessage, setCurrentMessage] = useState(messages[0])
 
   useEffect(() => {
@@ -42,7 +46,7 @@ export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
       <div className="max-w-[1248px] mx-auto px-6 py-8">
         {/* Header */}
         <h1 className="text-2xl font-bold text-[#202333] mb-6">
-          Loading your matched candidates...
+          {t('candidates.loadingTitle')}
         </h1>
 
         {/* Progress Section */}
@@ -66,7 +70,7 @@ export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
         {/* Additional loading message */}
         <div className="text-center mt-8">
           <p className="text-[#585d72] text-sm">
-            Analyzing 43 candidate profiles to find your perfect matches...
+            {t('loading.analyzing')} 43 {t('candidates.profiles')}...
           </p>
         </div>
       </div>

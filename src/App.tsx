@@ -1,19 +1,30 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import { AppProvider } from './context/AppContext'
+import { LanguageProvider } from './context/LanguageContext'
 import { CheckoutSummary } from './pages/CheckoutSummary'
 import { SuccessPage } from './pages/SuccessPage'
+import { LanguageSelectionPage } from './pages/LanguageSelectionPage'
 
 function App() {
   return (
-    <AppProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<CheckoutSummary />} />
-          <Route path="/checkout" element={<CheckoutSummary />} />
-          <Route path="/success" element={<SuccessPage />} />
-        </Routes>
-      </Router>
-    </AppProvider>
+    <LanguageProvider>
+      <AppProvider>
+        <Router>
+          <Routes>
+            {/* Language selection page */}
+            <Route path="/" element={<LanguageSelectionPage />} />
+            
+            {/* Language-specific routes */}
+            <Route path="/:lang/checkout" element={<CheckoutSummary />} />
+            <Route path="/:lang/success" element={<SuccessPage />} />
+            
+            {/* Redirect old routes to language selection */}
+            <Route path="/checkout" element={<Navigate to="/" replace />} />
+            <Route path="/success" element={<Navigate to="/" replace />} />
+          </Routes>
+        </Router>
+      </AppProvider>
+    </LanguageProvider>
   )
 }
 

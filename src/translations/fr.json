@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "backToJobListing": "Retour à l'offre d'emploi",
+    "backToJobListings": "Retour aux offres d'emploi"
+  },
+  "success": {
+    "title": "Votre annonce sera bientôt en ligne",
+    "description": "Vous avez réservé avec succès l'un de nos produits pour votre offre d'emploi. Veuillez vérifier votre boîte de réception pour plus d'informations.",
+    "whileYouWait": "En attendant les candidats",
+    "exploreApplicants": "Explorer les candidats potentiels",
+    "candidatesFound": "Nous avons trouvé 43 candidats pour votre poste de",
+    "position": "",
+    "jobTitle": "Calculateur*trice 80-100%"
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "step1Title": "Inviter des candidats pré-sélectionnés",
+    "step1Description": "Basé sur vos exigences d'emploi",
+    "step2Title": "Ils reçoivent des invitations automatiques",
+    "step2Description": "Les candidats voient votre intérêt et peuvent postuler immédiatement",
+    "step3Title": "Ne payez que ce que vous obtenez",
+    "step3Description": "Tarification transparente par réponse, aucun frais caché."
+  },
+  "features": {
+    "answerRate": "Taux de réponse de 90% typiquement",
+    "responseTime": "Les candidats répondent en quelques heures",
+    "pricing": "À partir de CHF 40.- par réponse"
+  },
+  "buttons": {
+    "browseCandidate": "Parcourir 43 candidats correspondants",
+    "inviteToUnlock": "Inviter pour débloquer",
+    "invited": "Invité pour débloquer",
+    "viewDetails": "Voir les détails",
+    "confirmInvitation": "Confirmer l'invitation",
+    "cancel": "Annuler",
+    "continueBrowsing": "Continuer à parcourir",
+    "finishAndView": "Terminer et voir l'offre d'emploi",
+    "showMore": "Afficher plus ({count} restants)"
+  },
+  "candidates": {
+    "matchesFound": "{count} correspondances trouvées",
+    "description": "Notre algorithme de correspondance a sélectionné les candidats les plus pertinents pour votre poste. Chaque profil a été analysé et classé.",
+    "loadingTitle": "Chargement de vos candidats correspondants...",
+    "readyToHire": "Prêt à embaucher ?",
+    "bestCandidates": "Les meilleurs candidats sont embauchés rapidement !",
+    "contactInfo": "Informations de contact",
+    "education": "Éducation",
+    "pastExperiences": "Expériences passées",
+    "showInvitedOnly": "Afficher uniquement les candidats invités",
+    "profiles": "profils de candidats",
+    "yearsExperience": "{years} années d'expérience"
+  },
+  "loading": {
+    "searching": "Recherche dans la base de données des candidats...",
+    "analyzing": "Analyse des profils correspondants...",
+    "ranking": "Classement des candidats par pertinence..."
+  },
+  "modal": {
+    "confirmTitle": "Confirmer l'invitation et le coût",
+    "costDescription": "Chaque invitation entraîne des frais modiques de CHF 40. Ne payez que pour les candidats qui répondent.",
+    "example": "Par exemple :",
+    "example1": "Envoyer 5 invitations → 5 candidats répondent = CHF 200",
+    "example2": "Envoyer 5 invitations → 2 candidats répondent = CHF 80",
+    "example3": "Envoyer 5 invitations → 0 candidat répond = CHF 0",
+    "noAnswerNoCharge": "Pas de réponse, pas de frais.",
+    "noChargeDescription": "Vous ne serez pas facturé si le candidat ne répond pas jusqu'à l'expiration de votre offre d'emploi.",
+    "dontShowAgain": "Ne plus afficher",
+    "finishTitle": "Êtes-vous prêt à terminer ?",
+    "finishDescription": "Vous avez invité {count} candidats à postuler pour votre poste.",
+    "finishWarning": "Une fois que vous quittez cette page, vous ne pourrez plus revenir pour inviter d'autres candidats.",
+    "finishReminder": "Assurez-vous d'avoir invité tous les candidats qui vous intéressent avant de terminer."
+  },
+  "privacy": {
+    "title": "Nous respectons la vie privée des candidats.",
+    "description": "Les coordonnées ne sont partagées qu'après que les candidats acceptent votre invitation pour maintenir la confiance et respecter les réglementations sur la vie privée.",
+    "contactTooltip": "Ces informations sont privées jusqu'à ce que le candidat accepte votre invitation",
+    "dismiss": "Ignorer"
+  }
+}

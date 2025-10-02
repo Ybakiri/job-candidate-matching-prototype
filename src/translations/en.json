@@ -1,0 +1,79 @@
+{
+  "navigation": {
+    "backToJobListing": "Return to job listing",
+    "backToJobListings": "Back to job listings"
+  },
+  "success": {
+    "title": "Your ad will be online soon",
+    "description": "You have successfully booked one of our products for your job advertisement. Please check your inbox for more information.",
+    "whileYouWait": "While you wait for candidates",
+    "exploreApplicants": "Explore potential applicants",
+    "candidatesFound": "We have found 43 candidates for your",
+    "position": "position",
+    "jobTitle": "Kalkulator*in 80-100%"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "step1Title": "Invite pre-matched candidates",
+    "step1Description": "Based on your job requirements",
+    "step2Title": "They receive automatic invitations", 
+    "step2Description": "The candidates see your interest and can apply immediately",
+    "step3Title": "Only pay for what you get",
+    "step3Description": "Transparent per-response pricing, no hidden fees."
+  },
+  "features": {
+    "answerRate": "90% answer rate typically",
+    "responseTime": "Candidates answer within a few hours",
+    "pricing": "Starting from CHF 40.- per response"
+  },
+  "buttons": {
+    "browseCandidate": "Browse 43 matched candidates",
+    "inviteToUnlock": "Invite to unlock",
+    "invited": "Invited to unlock",
+    "viewDetails": "View details",
+    "confirmInvitation": "Confirm invitation",
+    "cancel": "Cancel",
+    "continueBrowsing": "Continue browsing",
+    "finishAndView": "Finish and view job ad",
+    "showMore": "Show more ({count} remaining)"
+  },
+  "candidates": {
+    "matchesFound": "{count} Matches Found", 
+    "description": "Our matching algorithm has curated the most relevant candidates for your position. Each profile has been analyzed and ranked.",
+    "loadingTitle": "Loading your matched candidates...",
+    "readyToHire": "Ready to hire?",
+    "bestCandidates": "The best candidates get hired quickly!",
+    "contactInfo": "Contact information",
+    "education": "Education",
+    "pastExperiences": "Past experiences",
+    "showInvitedOnly": "Show invited candidates only",
+    "profiles": "candidate profiles",
+    "yearsExperience": "{years} years of experience"
+  },
+  "loading": {
+    "searching": "Searching candidate database...",
+    "analyzing": "Analyzing matching profiles...",
+    "ranking": "Ranking candidates by relevance..."
+  },
+  "modal": {
+    "confirmTitle": "Confirm invitation & cost",
+    "costDescription": "Each invitation incurs a small fee of CHF 40. Only pay for the applicants who answer.",
+    "example": "For example:",
+    "example1": "Send 5 invitations → 5 candidates respond = CHF 200",
+    "example2": "Send 5 invitations → 2 candidates respond = CHF 80", 
+    "example3": "Send 5 invitations → 0 candidates respond = CHF 0",
+    "noAnswerNoCharge": "No answer, no charge.",
+    "noChargeDescription": "You won't be charged if the applicant doesn't answer until your job ad expires.",
+    "dontShowAgain": "Don't show this again",
+    "finishTitle": "Are you ready to finish?",
+    "finishDescription": "You have invited {count} candidates to apply for your position.",
+    "finishWarning": "Once you leave this page, you won't be able to return to invite more candidates.",
+    "finishReminder": "Make sure you've invited all the candidates you're interested in before finishing."
+  },
+  "privacy": {
+    "title": "We respect candidate privacy.",
+    "description": "Contact details are only shared after candidates accept your invitation to maintain trust and comply with privacy regulations.",
+    "contactTooltip": "This information is private until the candidate accepts your invitation",
+    "dismiss": "Dismiss"
+  }
+}

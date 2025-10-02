@@ -5,10 +5,12 @@ import { InvitationModal } from './InvitationModal'
 import { StickyFooter } from './StickyFooter'
 import { Notification } from './Notification'
 import { useAppContext } from '../context/AppContext'
+import { useTranslation } from '../context/LanguageContext'
 import { Candidate } from '../types'
 
 export function CandidateList() {
   const { state, inviteCandidate, getFilteredCandidates } = useAppContext()
+  const { t } = useTranslation()
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null)
   const [showDrawer, setShowDrawer] = useState(false)
   const [showPricingModal, setShowPricingModal] = useState(false)
@@ -58,28 +60,28 @@ export function CandidateList() {
           {/* Left Side - Header */}
           <div className="w-[600px]">
             <h1 className="text-2xl font-bold text-[#202333] mb-4">
-              {candidates.length} Matches Found
+              {t('candidates.matchesFound', { count: candidates.length })}
             </h1>
             <p className="text-base text-[#585d72]">
-              Our matching algorithm has curated the most relevant candidates for your position. Each profile has been analyzed and ranked.
+              {t('candidates.description')}
             </p>
           </div>
 
           {/* Right Side - How it works */}
           <div className="bg-white rounded-lg p-6 flex-1">
-            <h2 className="text-lg font-bold text-[#202333] mb-4">How it works</h2>
+            <h2 className="text-lg font-bold text-[#202333] mb-4">{t('howItWorks.title')}</h2>
             <ol className="space-y-3">
               <li className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">1</div>
-                <span className="text-base text-[#202333]">Check out the profiles that interest you</span>
+                <span className="text-base text-[#202333]">{t('howItWorks.step1Title')}</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">2</div>
-                <span className="text-base text-[#202333]">Send an invitation to apply for your job posting</span>
+                <span className="text-base text-[#202333]">{t('howItWorks.step2Title')}</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="w-6 h-6 bg-[#0e0e14] rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0">3</div>
-                <span className="text-base text-[#202333]">You only pay for those who respond to your invitation</span>
+                <span className="text-base text-[#202333]">{t('howItWorks.step3Title')}</span>
               </li>
             </ol>
           </div>
@@ -94,13 +96,13 @@ export function CandidateList() {
               </div>
             </div>
             <p className="flex-1 text-sm font-normal text-[#0f204d] leading-[21px]">
-              Privacy first: job-seeker informations stay private until they reply
+              {t('privacy.description')}
             </p>
             <button 
               onClick={() => setShowPrivacyBanner(false)}
               className="text-sm text-black underline"
             >
-              Close
+              {t('privacy.dismiss')}
             </button>
           </div>
         )}
@@ -124,7 +126,7 @@ export function CandidateList() {
               onClick={handleShowMore}
               className="bg-white border border-[#e6e6ea] rounded-lg px-6 py-3 text-base font-semibold text-[#202333] hover:bg-gray-50 hover:border-[#d1d5db] transition-colors duration-200"
             >
-              Show more ({candidates.length - displayedCount} remaining)
+              {t('buttons.showMore', { count: candidates.length - displayedCount })}
             </button>
           </div>
         )}
