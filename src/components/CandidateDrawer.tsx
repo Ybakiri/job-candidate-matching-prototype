@@ -71,7 +71,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                       >
                         <div className="flex gap-1 items-center cursor-help">
                           <div className="w-6 h-6 flex items-center justify-center">
-                            <img alt="" className="w-4 h-4 shrink-0" src={imgFrame} />
+                            <img alt="" className="w-6 h-6 shrink-0" src={imgFrame} />
                           </div>
                           <h2 className="text-base font-bold text-black leading-6">{candidate.title}</h2>
                         </div>

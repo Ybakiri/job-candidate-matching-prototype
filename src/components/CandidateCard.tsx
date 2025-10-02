@@ -49,7 +49,7 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                     position="top"
                   >
                     <div className="flex items-center gap-1 cursor-help">
-                      <img alt="" className="w-4 h-4 shrink-0" src={imgFrame} />
+                      <img alt="" className="w-6 h-6 shrink-0" src={imgFrame} />
                       <h3 className="text-base font-semibold text-black leading-6">{candidate.title}</h3>
                     </div>
                   </Tooltip>
