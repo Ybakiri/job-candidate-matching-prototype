@@ -41,7 +41,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
               onClick={onClose}
               className="w-full h-full flex items-center justify-center"
             >
-              <img alt="" className="block max-w-none size-full" src={imgClose} />
+              <img alt="" className="w-6 h-6 shrink-0" src={imgClose} />
             </button>
           </div>
         </div>
@@ -71,7 +71,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                       >
                         <div className="flex gap-1 items-center cursor-help">
                           <div className="w-6 h-6 flex items-center justify-center">
-                            <img alt="" className="block max-w-none w-full h-auto" src={imgFrame} />
+                            <img alt="" className="w-4 h-4 shrink-0" src={imgFrame} />
                           </div>
                           <h2 className="text-base font-bold text-black leading-6">{candidate.title}</h2>
                         </div>
@@ -107,7 +107,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                     disabled
                     className="bg-[#9ED7BE] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2 cursor-not-allowed"
                   >
-                    <img alt="" className="w-6 h-auto" src={imgCheckWhite} style={{filter: 'brightness(0) invert(1)'}} />
+                    <img alt="" className="w-4 h-4 shrink-0" src={imgCheckWhite} style={{filter: 'brightness(0) invert(1)'}} />
                     <span className="text-base font-bold leading-6">Invited to unlock</span>
                   </button>
                 ) : (
@@ -116,7 +116,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                     className="bg-[#0e0e14] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2"
                   >
                     <div className="w-6 h-6 flex items-center justify-center">
-                      <img alt="" className="block max-w-none w-full h-auto" src={imgSend} />
+                      <img alt="" className="w-4 h-4 shrink-0" src={imgSend} />
                     </div>
                     <span className="text-base font-bold leading-6">Invite to unlock</span>
                   </button>
@@ -143,7 +143,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                   >
                     {skill.matches && (
                       <div className="w-6 h-6 flex items-center justify-center">
-                        <img alt="" className="block max-w-none w-full h-auto" src={imgCheck} />
+                        <img alt="" className="w-4 h-4 shrink-0" src={imgCheck} />
                       </div>
                     )}
                     <span className="text-sm font-semibold text-[#202333] tracking-[-0.3px] leading-[21px]">
@@ -164,7 +164,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                   <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">Contact information</h3>
                 </Tooltip>
                 <div className="w-4 h-4 flex items-center justify-center">
-                  <img alt="" className="block max-w-none w-full h-auto" src={imgLock} />
+                  <img alt="" className="w-4 h-4 shrink-0" src={imgLock} />
                 </div>
               </div>
               
@@ -217,7 +217,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                 <div className="flex items-center justify-between">
                   <div className="flex gap-2 items-center">
                     <div className="w-6 h-6 flex items-center justify-center">
-                      <img alt="" className="block max-w-none w-full h-auto" src={imgUpgrade} />
+                      <img alt="" className="w-4 h-4 shrink-0" src={imgUpgrade} />
                     </div>
                     <span className="text-sm font-normal text-[#2141a1] leading-4">
                       AI generated, review information on your own.
@@ -228,7 +228,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                       More Info
                     </span>
                     <div className="w-4 h-4 flex items-center justify-center">
-                      <img alt="" className="block max-w-none w-full h-auto" src={imgInfo} />
+                      <img alt="" className="w-4 h-4 shrink-0" src={imgInfo} />
                     </div>
                   </div>
                 </div>
@@ -246,7 +246,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                     {candidate.insights.advantages.map((advantage, index) => (
                       <div key={index} className="flex gap-2 items-start">
                         <div className="w-6 h-6 shrink-0 flex items-center justify-center">
-                          <img alt="" className="block max-w-none w-full h-auto" src={imgAdvantage} />
+                          <img alt="" className="w-4 h-4 shrink-0" src={imgAdvantage} />
                         </div>
                         <span className="text-base font-normal text-[#202333] leading-6">
                           {advantage}
@@ -261,7 +261,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                   <h4 className="text-sm font-semibold text-[#585d72]">Disadvantages</h4>
                   <div className="flex gap-2 items-start">
                     <div className="w-6 h-6 shrink-0 flex items-center justify-center">
-                      <img alt="" className="block max-w-none w-full h-auto" src={imgDisadvantage} />
+                      <img alt="" className="w-4 h-4 shrink-0" src={imgDisadvantage} />
                     </div>
                     <span className="text-base font-normal text-[#202333] leading-6">
                       {candidate.insights.disadvantages[0]}

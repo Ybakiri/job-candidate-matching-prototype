@@ -55,7 +55,7 @@ export function Header({ showBackButton = true, backTo = '/', backText = 'Return
             </div>
           </div>
           <div className="w-6 h-6 flex items-center justify-center">
-            <img alt="User menu" className="w-6 h-6" src={imgChevronDown} />
+            <img alt="User menu" className="w-4 h-4 shrink-0" src={imgChevronDown} />
           </div>
         </div>
       </div>

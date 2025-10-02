@@ -43,7 +43,7 @@ export function SuccessPage() {
         <div className="bg-[#e6f5ee] w-full rounded-lg flex gap-4 items-center pl-6 pr-8 py-4">
           <div className="flex-1 flex items-start gap-2">
             <div className="w-6 h-6 shrink-0">
-              <img alt="" className="block max-w-none size-full" src={imgCheckCircle} />
+              <img alt="" className="w-6 h-6 shrink-0" src={imgCheckCircle} />
             </div>
             <div className="flex-1">
               <h3 className="text-sm font-bold text-[#202333] tracking-[-0.3px] leading-[21px] mb-1">
@@ -93,7 +93,7 @@ export function SuccessPage() {
                   {/* Step 1 */}
                   <div className="flex gap-4 items-start">
                     <div className="w-6 h-6 shrink-0 overflow-hidden">
-                      <img alt="" className="w-full h-full object-contain" src={imgFrame} />
+                      <img alt="" className="w-6 h-6 shrink-0" src={imgFrame} />
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
@@ -108,7 +108,7 @@ export function SuccessPage() {
                   {/* Step 2 */}
                   <div className="flex gap-4 items-start">
                     <div className="w-6 h-6 shrink-0 overflow-hidden">
-                      <img alt="" className="w-full h-full object-contain" src={imgEmail} />
+                      <img alt="" className="w-6 h-6 shrink-0" src={imgEmail} />
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
@@ -123,7 +123,7 @@ export function SuccessPage() {
                   {/* Step 3 */}
                   <div className="flex gap-4 items-start">
                     <div className="w-6 h-6 shrink-0 overflow-hidden">
-                      <img alt="" className="w-full h-full object-contain" src={imgTipsAndUpdates} />
+                      <img alt="" className="w-6 h-6 shrink-0" src={imgTipsAndUpdates} />
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
