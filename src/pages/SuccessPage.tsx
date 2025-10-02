@@ -43,7 +43,7 @@ export function SuccessPage() {
         <div className="bg-[#e6f5ee] w-full rounded-lg flex gap-4 items-center pl-6 pr-8 py-4">
           <div className="flex-1 flex items-start gap-2">
             <div className="w-6 h-6 shrink-0">
-              <img alt="" className="w-6 h-6 shrink-0" src={imgCheckCircle} />
+              <img alt="" className="icon-lg" src={imgCheckCircle} />
             </div>
             <div className="flex-1">
               <h3 className="text-sm font-bold text-[#202333] tracking-[-0.3px] leading-[21px] mb-1">
@@ -93,7 +93,7 @@ export function SuccessPage() {
                   {/* Step 1 */}
                   <div className="flex gap-4 items-start">
                     <div className="w-6 h-6 shrink-0 overflow-hidden">
-                      <img alt="" className="w-6 h-6 shrink-0" src={imgFrame} />
+                      <img alt="" className="icon-lg" src={imgFrame} />
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
@@ -108,7 +108,7 @@ export function SuccessPage() {
                   {/* Step 2 */}
                   <div className="flex gap-4 items-start">
                     <div className="w-6 h-6 shrink-0 overflow-hidden">
-                      <img alt="" className="w-6 h-6 shrink-0" src={imgEmail} />
+                      <img alt="" className="icon-lg" src={imgEmail} />
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
@@ -123,7 +123,7 @@ export function SuccessPage() {
                   {/* Step 3 */}
                   <div className="flex gap-4 items-start">
                     <div className="w-6 h-6 shrink-0 overflow-hidden">
-                      <img alt="" className="w-6 h-6 shrink-0" src={imgTipsAndUpdates} />
+                      <img alt="" className="icon-lg" src={imgTipsAndUpdates} />
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
@@ -141,19 +141,19 @@ export function SuccessPage() {
               {/* Features Box */}
               <div className="border border-[#e6e6ea] rounded p-3 flex flex-col gap-3 w-full">
                   <div className="flex items-center gap-2">
-                    <img alt="" className="w-4 h-4 shrink-0" src={imgCheck} />
+                    <img alt="" className="icon-sm" src={imgCheck} />
                     <span className="text-sm text-[#202333] leading-[21px]">
                       {t('features.answerRate')}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <img alt="" className="w-4 h-4 shrink-0" src={imgCheck} />
+                    <img alt="" className="icon-sm" src={imgCheck} />
                     <span className="text-sm text-[#202333] leading-[21px]">
                       {t('features.responseTime')}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <img alt="" className="w-4 h-4 shrink-0" src={imgCheck} />
+                    <img alt="" className="icon-sm" src={imgCheck} />
                     <span className="text-sm text-[#202333] leading-[21px]">
                       {t('features.pricing')}
                     </span>
@@ -167,7 +167,7 @@ export function SuccessPage() {
                       onClick={handleBrowseCandidates}
                       className="flex-1 bg-[#0e0e14] text-white px-[24px] py-[12px] rounded-[4px] flex items-center justify-center gap-2 font-bold text-base leading-6"
                     >
-                      <img alt="" className="w-6 h-6 shrink-0" src={imgEye} />
+                      <img alt="" className="icon-lg" src={imgEye} />
                       {t('buttons.browseCandidate')}
                     </button>
                   ) : showCandidates ? (

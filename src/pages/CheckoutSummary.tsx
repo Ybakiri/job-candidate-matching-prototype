@@ -26,7 +26,7 @@ export function CheckoutSummary() {
           {/* Step 1 - x=450, y=88 */}
           <div className="flex flex-col items-center">
             <div className="relative w-12 h-12">
-              <img alt="" className="w-3 h-3 shrink-0" src={imgEllipse92} />
+              <img alt="" className="icon-sm" src={imgEllipse92} />
               <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">1</div>
             </div>
             <span className="mt-2 text-sm text-[#202333] w-40 text-center">Job ad</span>
@@ -35,7 +35,7 @@ export function CheckoutSummary() {
           {/* Step 2 - x=614, y=88 */}
           <div className="flex flex-col items-center">
             <div className="relative w-12 h-12">
-              <img alt="" className="w-3 h-3 shrink-0" src={imgEllipse92} />
+              <img alt="" className="icon-sm" src={imgEllipse92} />
               <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">2</div>
             </div>
             <span className="mt-2 text-sm text-[#202333] w-40 text-center">Preview</span>
@@ -44,7 +44,7 @@ export function CheckoutSummary() {
           {/* Step 3 - x=778, y=88 */}
           <div className="flex flex-col items-center">
             <div className="relative w-12 h-12">
-              <img alt="" className="w-3 h-3 shrink-0" src={imgEllipse92} />
+              <img alt="" className="icon-sm" src={imgEllipse92} />
               <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">3</div>
             </div>
             <span className="mt-2 text-sm text-[#202333] w-40 text-center">Product Selection</span>
@@ -53,7 +53,7 @@ export function CheckoutSummary() {
           {/* Step 4 - Active - x=942, y=88 */}
           <div className="flex flex-col items-center">
             <div className="relative w-12 h-12">
-              <img alt="" className="w-3 h-3 shrink-0" src={imgEllipse93} />
+              <img alt="" className="icon-sm" src={imgEllipse93} />
               <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">4</div>
             </div>
             <span className="mt-2 text-sm font-semibold text-[#202333] w-40 text-center tracking-tight">Summary</span>
@@ -149,7 +149,7 @@ export function CheckoutSummary() {
                 className="bg-[#222222] text-white px-5 pr-6 py-3 rounded flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors font-bold"
               >
                 <div className="w-6 h-6">
-                  <img alt="" className="w-4 h-4 shrink-0" src={imgSend} />
+                  <img alt="" className="icon-sm" src={imgSend} />
                 </div>
                 <span className="text-base leading-6">Publish now</span>
               </button>

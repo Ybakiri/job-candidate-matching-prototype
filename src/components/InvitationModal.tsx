@@ -61,7 +61,7 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
             <div className="bg-[#f0f4ff] rounded-lg flex gap-2 items-center pl-6 pr-[31px] py-4">
               <div className="w-6 h-6 shrink-0 overflow-clip relative">
                 <div className="absolute inset-[8.333%]">
-                  <img alt="" className="w-6 h-6 shrink-0" src={imgInfo} />
+                  <img alt="" className="icon-lg" src={imgInfo} />
                 </div>
               </div>
               <p className="text-[14px] text-black leading-[21px] font-bold tracking-[-0.3px]">
@@ -110,7 +110,7 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
               onClick={handleConfirm}
               className="bg-[#0e0e14] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2 font-bold text-base leading-6"
             >
-              <img alt="" className="w-4 h-4 shrink-0" src={imgSend} />
+              <img alt="" className="icon-sm" src={imgSend} />
               Confirm invitation
             </button>
           </div>

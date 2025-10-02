@@ -20,7 +20,7 @@ export function Header({ showBackButton = true, backTo = '/', backText = 'Return
         {showBackButton && (
           <Link to={backTo} className="flex items-center gap-2">
             <div className="w-6 h-6 flex items-center justify-center">
-              <img alt="Back" className="w-6 h-6" src={imgChevronLeft} />
+              <img alt="Back" className="icon-lg" src={imgChevronLeft} />
             </div>
             <div className="text-[#e6e6ea] text-base font-normal">
               {backText}
@@ -33,7 +33,7 @@ export function Header({ showBackButton = true, backTo = '/', backText = 'Return
         <button className="flex items-center gap-2 pl-[12px] pr-[8px] py-[4px]">
           <span className="text-[#b8bac3] text-[14px] font-semibold tracking-[-0.3px] underline">FR</span>
           <div className="w-6 h-6 flex items-center justify-center">
-            <img alt="Language dropdown" className="w-6 h-6" src={imgChevronDown} />
+            <img alt="Language dropdown" className="icon-lg" src={imgChevronDown} />
           </div>
         </button>
         
@@ -55,7 +55,7 @@ export function Header({ showBackButton = true, backTo = '/', backText = 'Return
             </div>
           </div>
           <div className="w-6 h-6 flex items-center justify-center">
-            <img alt="User menu" className="w-4 h-4 shrink-0" src={imgChevronDown} />
+            <img alt="User menu" className="icon-sm" src={imgChevronDown} />
           </div>
         </div>
       </div>

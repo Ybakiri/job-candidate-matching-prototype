@@ -8,6 +8,42 @@
   html {
     font-family: 'Open Sans', sans-serif;
   }
+  
+  /* Global SVG aspect ratio preservation */
+  img[src$=".svg"] {
+    object-fit: contain;
+  }
+}
+
+@layer utilities {
+  /* SVG Icon utility classes */
+  .icon-sm { 
+    width: 16px; 
+    height: 16px; 
+    object-fit: contain; 
+    flex-shrink: 0;
+  }
+  
+  .icon-md { 
+    width: 20px; 
+    height: 20px; 
+    object-fit: contain; 
+    flex-shrink: 0;
+  }
+  
+  .icon-lg { 
+    width: 24px; 
+    height: 24px; 
+    object-fit: contain; 
+    flex-shrink: 0;
+  }
+  
+  .icon-xl {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
 }
 
 @keyframes slide-in {

@@ -50,7 +50,7 @@ export function FinalConfirmationModal({ isOpen, onClose, invitedCount }: FinalC
             <div className="bg-[#f0f4ff] rounded-lg flex gap-2 items-center pl-6 pr-[31px] py-4">
               <div className="w-6 h-6 shrink-0 overflow-clip relative">
                 <div className="absolute inset-[8.333%]">
-                  <img alt="" className="w-6 h-6 shrink-0" src={imgInfo} />
+                  <img alt="" className="icon-lg" src={imgInfo} />
                 </div>
               </div>
               <p className="text-[14px] text-black leading-[21px]">

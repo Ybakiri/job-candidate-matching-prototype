@@ -92,7 +92,7 @@ export function CandidateList() {
           <div className="bg-[#f0f4ff] rounded-lg flex gap-2 items-center pl-6 pr-[31px] py-4 mb-8">
             <div className="size-[24px] shrink-0 overflow-clip relative">
               <div className="absolute inset-[4.17%_12.5%]">
-                <img alt="" className="w-5 h-5 shrink-0" src="/971fcbac8ff1deafcaa107bdcd1527b61bb2b24e.svg" />
+                <img alt="" className="icon-md" src="/971fcbac8ff1deafcaa107bdcd1527b61bb2b24e.svg" />
               </div>
             </div>
             <p className="flex-1 text-sm font-normal text-[#0f204d] leading-[21px]">
