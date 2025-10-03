@@ -7,7 +7,7 @@ export function LanguageSelectionPage() {
 
   const handleLanguageSelect = (lang: Language) => {
     setLanguage(lang)
-    navigate(`/${lang}/success`)
+    navigate(`/${lang}/checkout`)
   }
 
   const languages = [
