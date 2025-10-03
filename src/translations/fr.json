@@ -75,5 +75,33 @@
     "description": "Les coordonnées ne sont partagées qu'après que les candidats acceptent votre invitation pour maintenir la confiance et respecter les réglementations sur la vie privée.",
     "contactTooltip": "Ces informations sont privées jusqu'à ce que le candidat accepte votre invitation",
     "dismiss": "Ignorer"
+  },
+  "checkout": {
+    "steps": {
+      "jobAd": "Annonce d'emploi",
+      "preview": "Aperçu",
+      "productSelection": "Sélection du produit",
+      "summary": "Résumé"
+    },
+    "title": "Récapitulatif de la commande",
+    "subtitle": "Vérifiez les détails de la facture et publiez votre offre d'emploi",
+    "orderDetails": {
+      "title": "Détails de la commande",
+      "billedTo": "Facturé à",
+      "addNotesForInvoice": "Ajouter des notes pour la facture"
+    },
+    "orderSummary": {
+      "title": "Récapitulatif de la commande",
+      "product": "Produit",
+      "priceInCHF": "Prix en CHF",
+      "jobsBasic": "jobs.ch Basic",
+      "edit": "Modifier",
+      "useACoupon": "Utiliser un coupon",
+      "subtotal": "Sous-total",
+      "incVAT": "TVA incluse",
+      "totalInCHF": "Total en CHF",
+      "termsText": "En continuant, vous acceptez nos conditions générales et reconnaissez notre politique de protection des données.",
+      "publishNow": "Publier maintenant"
+    }
   }
 }

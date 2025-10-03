@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { Header } from '../components/Header'
+import { useTranslation } from '../context/LanguageContext'
 
 // Import all assets
 const imgSend = "/4e19cf6aa16043911214e92360f13f44c9d070ab.svg"
@@ -9,9 +10,10 @@ const imgEllipse93 = "/2b7aa68a01b84c3424083e0a826a4959a997f858.svg"
 
 export function CheckoutSummary() {
   const navigate = useNavigate()
+  const { t, language } = useTranslation()
 
   const handlePublishNow = () => {
-    navigate('/success')
+    navigate(`/${language}/success`)
   }
 
   return (
@@ -29,7 +31,7 @@ export function CheckoutSummary() {
               <img alt="" className="icon-sm" src={imgEllipse92} />
               <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">1</div>
             </div>
-            <span className="mt-2 text-sm text-[#202333] w-40 text-center">Job ad</span>
+            <span className="mt-2 text-sm text-[#202333] w-40 text-center">{t('checkout.steps.jobAd')}</span>
           </div>
           
           {/* Step 2 - x=614, y=88 */}
@@ -38,7 +40,7 @@ export function CheckoutSummary() {
               <img alt="" className="icon-sm" src={imgEllipse92} />
               <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">2</div>
             </div>
-            <span className="mt-2 text-sm text-[#202333] w-40 text-center">Preview</span>
+            <span className="mt-2 text-sm text-[#202333] w-40 text-center">{t('checkout.steps.preview')}</span>
           </div>
           
           {/* Step 3 - x=778, y=88 */}
@@ -47,7 +49,7 @@ export function CheckoutSummary() {
               <img alt="" className="icon-sm" src={imgEllipse92} />
               <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">3</div>
             </div>
-            <span className="mt-2 text-sm text-[#202333] w-40 text-center">Product Selection</span>
+            <span className="mt-2 text-sm text-[#202333] w-40 text-center">{t('checkout.steps.productSelection')}</span>
           </div>
           
           {/* Step 4 - Active - x=942, y=88 */}
@@ -56,25 +58,25 @@ export function CheckoutSummary() {
               <img alt="" className="icon-sm" src={imgEllipse93} />
               <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">4</div>
             </div>
-            <span className="mt-2 text-sm font-semibold text-[#202333] w-40 text-center tracking-tight">Summary</span>
+            <span className="mt-2 text-sm font-semibold text-[#202333] w-40 text-center tracking-tight">{t('checkout.steps.summary')}</span>
           </div>
         </div>
       </div>
 
       {/* Title Section - x=505, y=215, width=431, height=65 */}
       <div className="absolute left-[505px] top-[215px] w-[431px] h-[65px] text-center">
-        <h1 className="text-2xl font-bold text-[#202333] mb-4 tracking-tight">Order Summary</h1>
-        <p className="text-base text-[#202333]">Check the invoice details and post your job advertisement</p>
+        <h1 className="text-2xl font-bold text-[#202333] mb-4 tracking-tight">{t('checkout.title')}</h1>
+        <p className="text-base text-[#202333]">{t('checkout.subtitle')}</p>
       </div>
 
       {/* Cards Container */}
       <div>
         {/* Order Details Card - x=164, y=323, width=408, height=543 */}
         <div className="absolute left-[164px] top-[323px] w-[408px] h-[570px] bg-white rounded shadow-[0px_4px_6px_-4px_rgba(24,39,75,0.12),0px_8px_8px_-4px_rgba(24,39,75,0.08)] p-6">
-          <h2 className="text-xl font-bold text-[#202333] mb-6">Order Details</h2>
+          <h2 className="text-xl font-bold text-[#202333] mb-6">{t('checkout.orderDetails.title')}</h2>
           
           <div className="mb-6">
-            <p className="text-xs text-[#585d72] mb-4">Billed to</p>
+            <p className="text-xs text-[#585d72] mb-4">{t('checkout.orderDetails.billedTo')}</p>
             <div className="space-y-3.5">
               <p className="text-sm font-semibold text-[#202333] tracking-tight leading-[21px]">TX Capital AG</p>
               <p className="text-sm font-semibold text-[#202333] tracking-tight leading-[21px]">Ebenaustrasse 22</p>
@@ -83,14 +85,14 @@ export function CheckoutSummary() {
           </div>
           
           <button className="text-base font-semibold text-[#0e0e14] underline hover:no-underline leading-6">
-            Add notes for the invoice
+            {t('checkout.orderDetails.addNotesForInvoice')}
           </button>
         </div>
         
         {/* Order Summary Card - x=588, y=323, width=688, height=543 */}
         <div className="absolute left-[588px] top-[323px] w-[688px] h-[570px] bg-white rounded shadow-[0px_4px_6px_-4px_rgba(24,39,75,0.12),0px_8px_8px_-4px_rgba(24,39,75,0.08)] p-8">
         <div className="flex items-center justify-between mb-8">
-          <h2 className="text-xl font-bold text-[#202333]">Order Summary</h2>
+          <h2 className="text-xl font-bold text-[#202333]">{t('checkout.orderSummary.title')}</h2>
           {/* Jobs.ch logo - x=620, y=355, width=103.125, height=20 */}
           <div className="w-[103px] h-5">
             <img alt="jobs.ch" className="block max-w-none h-full" src={imgJobsLogo} />
@@ -99,47 +101,47 @@ export function CheckoutSummary() {
         
         <div className="space-y-6">
           <div className="flex justify-between items-baseline">
-            <p className="text-xs text-[#585d72]">Product</p>
-            <p className="text-xs text-[#585d72] text-right">Price in CHF</p>
+            <p className="text-xs text-[#585d72]">{t('checkout.orderSummary.product')}</p>
+            <p className="text-xs text-[#585d72] text-right">{t('checkout.orderSummary.priceInCHF')}</p>
           </div>
           
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-2">
-              <span className="text-base text-[#202333]">jobs.ch Basic</span>
+              <span className="text-base text-[#202333]">{t('checkout.orderSummary.jobsBasic')}</span>
               <button className="text-base font-semibold text-[#0e0e14] underline hover:no-underline leading-[21px]">
-                Edit
+                {t('checkout.orderSummary.edit')}
               </button>
             </div>
             <span className="text-sm font-semibold text-[#202333] tracking-tight leading-[21px]">650.00</span>
           </div>
           
           <button className="text-base font-semibold text-[#0e0e14] underline hover:no-underline leading-6">
-            Use a coupon
+            {t('checkout.orderSummary.useACoupon')}
           </button>
           
           {/* Divider line - x=621, y=522, width=623, height=1 */}
           <div className="border-t border-[#e6e6ea] pt-6 space-y-4">
             <div className="flex justify-between">
-              <span className="text-sm font-semibold text-[#202333] tracking-tight leading-[21px]">Subtotal</span>
+              <span className="text-sm font-semibold text-[#202333] tracking-tight leading-[21px]">{t('checkout.orderSummary.subtotal')}</span>
               <span className="text-sm font-semibold text-[#202333] tracking-tight leading-[21px]">650.00</span>
             </div>
             
             <div className="flex justify-between">
-              <span className="text-sm font-semibold text-[#202333] tracking-tight leading-[21px]">Inc. VAT</span>
+              <span className="text-sm font-semibold text-[#202333] tracking-tight leading-[21px]">{t('checkout.orderSummary.incVAT')}</span>
               <span className="text-sm font-semibold text-[#202333] tracking-tight leading-[21px]">50.05</span>
             </div>
             
             <div className="flex justify-between pt-4">
-              <span className="text-base font-bold text-[#202333] leading-[19px]">Total in CHF</span>
+              <span className="text-base font-bold text-[#202333] leading-[19px]">{t('checkout.orderSummary.totalInCHF')}</span>
               <span className="text-base font-bold text-[#202333] leading-[19px]">700.05</span>
             </div>
             
-            <p className="text-xs text-[#585d72] leading-[18px]">Inc. VAT</p>
+            <p className="text-xs text-[#585d72] leading-[18px]">{t('checkout.orderSummary.incVAT')}</p>
           </div>
           
           <div className="pt-6">
             <p className="text-xs text-[#585d72] mb-6 leading-[18px] w-[624px]">
-              By continuing, you accept our Terms and Conditions and acknowledge our Data Protection policy.
+              {t('checkout.orderSummary.termsText')}
             </p>
             
             {/* Publish Button - x=1080, y=786, width=174, height=48 */}
@@ -151,7 +153,7 @@ export function CheckoutSummary() {
                 <div className="w-6 h-6">
                   <img alt="" className="icon-sm" src={imgSend} />
                 </div>
-                <span className="text-base leading-6">Publish now</span>
+                <span className="text-base leading-6">{t('checkout.orderSummary.publishNow')}</span>
               </button>
             </div>
           </div>

@@ -75,5 +75,33 @@
     "description": "Kontaktdaten werden erst nach Annahme Ihrer Einladung durch die Kandidaten geteilt, um Vertrauen zu erhalten und Datenschutzbestimmungen einzuhalten.",
     "contactTooltip": "Diese Informationen sind privat, bis der Kandidat Ihre Einladung annimmt",
     "dismiss": "Verwerfen"
+  },
+  "checkout": {
+    "steps": {
+      "jobAd": "Stellenanzeige",
+      "preview": "Vorschau",
+      "productSelection": "Produktauswahl",
+      "summary": "Zusammenfassung"
+    },
+    "title": "Bestellübersicht",
+    "subtitle": "Überprüfen Sie die Rechnungsdetails und veröffentlichen Sie Ihre Stellenanzeige",
+    "orderDetails": {
+      "title": "Bestelldetails",
+      "billedTo": "Rechnungsadresse",
+      "addNotesForInvoice": "Notizen zur Rechnung hinzufügen"
+    },
+    "orderSummary": {
+      "title": "Bestellübersicht",
+      "product": "Produkt",
+      "priceInCHF": "Preis in CHF",
+      "jobsBasic": "jobs.ch Basic",
+      "edit": "Bearbeiten",
+      "useACoupon": "Gutschein verwenden",
+      "subtotal": "Zwischensumme",
+      "incVAT": "Inkl. MwSt.",
+      "totalInCHF": "Gesamt in CHF",
+      "termsText": "Mit der Fortsetzung akzeptieren Sie unsere AGB und nehmen unsere Datenschutzrichtlinie zur Kenntnis.",
+      "publishNow": "Jetzt veröffentlichen"
+    }
   }
 }
