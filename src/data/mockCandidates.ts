@@ -1,31 +1,40 @@
 import { Candidate, MatchScore } from '../types'
 
-const adjectives = ['Innovative', 'Creative', 'Strategic', 'Visionary', 'Insightful', 'Dynamic', 'Analytical', 'Pioneering', 'Experienced', 'Talented']
-const roles = ['Data Scientist', 'ML Engineer', 'Data Analyst', 'Data Engineer', 'AI Specialist', 'BI Developer']
-const industries = ['telecommunications', 'social media', 'fintech', 'healthcare', 'e-commerce', 'retail', 'consulting', 'technology', 'banking', 'insurance']
+const adjectives = ['Experienced', 'Strategic', 'Dynamic', 'Customer-focused', 'Results-driven', 'Innovative', 'Analytical', 'Relationship-oriented', 'Data-driven', 'Collaborative']
+const roles = ['CRM Manager', 'Customer Success Manager', 'Marketing Manager', 'Sales Manager', 'Customer Experience Manager', 'Business Development Manager']
+const industries = ['automotive', 'telecommunications', 'retail', 'financial services', 'technology', 'manufacturing', 'consulting', 'e-commerce', 'healthcare', 'insurance']
 const regions = ['Zurich region', 'Bern region', 'Geneva region', 'Basel region', 'Lausanne region', 'St. Gallen region', 'Lucerne region', 'Ticino region']
 
 const allSkills = [
-  { name: 'Python', matches: true },
-  { name: 'R', matches: true },
+  { name: 'Salesforce', matches: true },
+  { name: 'HubSpot', matches: true },
+  { name: 'Microsoft Dynamics', matches: true },
+  { name: 'Customer Segmentation', matches: true },
+  { name: 'Email Marketing', matches: true },
+  { name: 'Marketing Automation', matches: true },
+  { name: 'Customer Analytics', matches: true },
+  { name: 'Lead Generation', matches: true },
+  { name: 'Customer Journey Mapping', matches: true },
   { name: 'SQL', matches: true },
-  { name: 'Tableau', matches: true },
-  { name: 'TensorFlow', matches: false },
-  { name: 'PyTorch', matches: false },
-  { name: 'Machine learning', matches: true },
-  { name: 'Deep learning', matches: false },
-  { name: 'Statistics', matches: true },
-  { name: 'Data visualization', matches: true },
-  { name: 'Big data', matches: false },
-  { name: 'Cloud computing', matches: false },
-  { name: 'Data governance', matches: false },
-  { name: 'Cluster analysis', matches: false },
-  { name: 'Time series analysis', matches: false },
-  { name: 'NLP', matches: false },
+  { name: 'Excel/Power BI', matches: true },
+  { name: 'A/B Testing', matches: true },
+  { name: 'Pipedrive', matches: false },
+  { name: 'Marketo', matches: false },
+  { name: 'Pardot', matches: false },
+  { name: 'Zendesk', matches: false },
+  { name: 'Google Analytics', matches: false },
+  { name: 'Tableau', matches: false },
+  { name: 'GDPR Compliance', matches: false },
+  { name: 'Project Management', matches: false },
+  { name: 'Agile/Scrum', matches: false },
+  { name: 'Python', matches: false },
+  { name: 'Adobe Campaign', matches: false },
+  { name: 'Oracle CX', matches: false },
+  { name: 'Customer Support', matches: false },
 ]
 
-const degrees = ['PhD in Computer Science', 'Master in Data Science', 'Bachelor in Statistics', 'Master in Mathematics', 'Bachelor in Computer Science', 'PhD in Statistics']
-const fields = ['Computer Science', 'Data Science', 'Statistics', 'Mathematics', 'Information Systems', 'Engineering']
+const degrees = ['Master in Business Administration', 'Bachelor in Marketing', 'Master in Marketing', 'Bachelor in Business Administration', 'Master in Digital Marketing', 'Bachelor in Communications']
+const fields = ['Business Administration', 'Marketing', 'Digital Marketing', 'Communications', 'Customer Relations', 'Business Management']
 
 function generateExperiences(): { role: string; industry: string }[] {
   return [
@@ -63,27 +72,27 @@ function generateInsights(candidate: Partial<Candidate>): { summary: string; adv
   const yearsOfExp = candidate.yearsExperience || 5
   
   const summaries = [
-    `The candidate has a solid background in C++ development with over ${yearsOfExp} years of experience, but lacks a Master's degree in computer science. They possess strong programming skills and experience in multithreading, but do not meet all the specific requirements for project management and graphics APIs.`,
-    `With ${yearsOfExp} years in data science and analytics, this candidate brings strong technical skills in Python and machine learning. Their experience spans multiple industries, providing valuable cross-functional insights.`,
-    `This professional combines ${yearsOfExp} years of hands-on experience with cutting-edge data science technologies. They have demonstrated success in implementing ML solutions at scale.`
+    `This candidate brings ${yearsOfExp} years of solid CRM and customer relationship experience with strong proficiency in Salesforce and marketing automation. They have demonstrated success in customer retention and lead generation but lack specific automotive industry experience.`,
+    `With ${yearsOfExp} years in customer success and CRM management, this professional has proven expertise in customer segmentation and data-driven marketing. Their cross-industry experience provides valuable perspective for customer relationship strategies.`,
+    `This CRM professional combines ${yearsOfExp} years of hands-on experience with customer analytics and relationship management. They have successfully implemented CRM solutions that improved customer retention rates and sales conversion.`
   ]
   
   const advantages = [
-    'Has approximately 4.0 years of industry experience working as a software engineer.',
-    'Has communication and writing skills in both German and English.',
-    'Has strong programming skills using C++ in large codebases.',
-    'Has experience with concurrent programming and multi-threading.',
-    'Experienced in Python, R, and SQL with proven track record.',
-    'Strong background in machine learning and statistical analysis.',
-    'Has led cross-functional teams in data-driven projects.',
-    'Demonstrated ability to translate business needs into technical solutions.'
+    'Has extensive experience with Salesforce and HubSpot CRM platforms.',
+    'Proven track record in customer retention and churn reduction strategies.',
+    'Strong analytical skills with experience in customer segmentation and targeting.',
+    'Demonstrated success in email marketing campaigns and automation.',
+    'Experience in leading cross-functional teams across sales and marketing.',
+    'Excellent communication skills in German, French, and English.',
+    'Has managed customer databases with 10,000+ contacts effectively.',
+    'Proven ability to increase customer lifetime value through strategic initiatives.'
   ]
   
   const disadvantages = [
-    'Does not have a master\'s degree in computer science or a related field.',
-    'Limited experience with cloud platforms (AWS, Azure, GCP).',
-    'No formal certification in project management methodologies.',
-    'May require additional training in specific industry domain knowledge.'
+    'Limited direct experience in the automotive industry and dealership operations.',
+    'No formal certification in advanced CRM platforms like Microsoft Dynamics.',
+    'May require additional training in automotive-specific customer journey mapping.',
+    'Limited experience with enterprise-level CRM integrations and data migration.'
   ]
   
   return {
