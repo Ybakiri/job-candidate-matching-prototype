@@ -26,6 +26,19 @@ interface CandidateDrawerProps {
 
 export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: CandidateDrawerProps) {
   const { t } = useTranslation()
+  
+  // Get localized title
+  const getLocalizedTitle = () => {
+    if (candidate.titleIndex !== undefined) {
+      const titles = t('candidateTitles.titles')
+      if (Array.isArray(titles) && titles[candidate.titleIndex]) {
+        return titles[candidate.titleIndex]
+      }
+    }
+    // Fallback to original title
+    return candidate.title
+  }
+  
   if (!isOpen) return null
 
   return (
@@ -67,12 +80,12 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                           <div className="w-6 h-6 flex items-center justify-center">
                             <img alt="" className="block" src={imgFrame} />
                           </div>
-                          <h2 className="text-base font-bold text-black leading-6">{candidate.title}</h2>
+                          <h2 className="text-base font-bold text-black leading-6">{getLocalizedTitle()}</h2>
                         </div>
                       </Tooltip>
                     ) : (
                       <div className="flex gap-1 items-center">
-                        <h2 className="text-base font-bold text-black leading-6">{candidate.title}</h2>
+                        <h2 className="text-base font-bold text-black leading-6">{getLocalizedTitle()}</h2>
                       </div>
                     )}
                     <div className="bg-[#d9e2fc] px-2 py-[2px] rounded-[20px] h-5 flex items-center">

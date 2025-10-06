@@ -106,11 +106,15 @@ function generateCandidate(index: number): Candidate {
     matchScore = 'average'
   }
   
+  // Use index to deterministically select title (will be localized in component)
+  const titleIndex = (index - 1) % 43 // We have 43 title combinations
+  
   const candidate: Partial<Candidate> = {
     id: `candidate-${index}`,
     matchScore,
     matchPercentage,
-    title: `${adjectives[Math.floor(Math.random() * adjectives.length)]} ${roles[Math.floor(Math.random() * roles.length)]}`,
+    titleIndex, // Store index instead of actual title
+    title: `${adjectives[Math.floor(Math.random() * adjectives.length)]} ${roles[Math.floor(Math.random() * roles.length)]}`, // Fallback for non-i18n usage
     yearsExperience,
     currentRole: `${roles[Math.floor(Math.random() * roles.length)]} at a ${industries[Math.floor(Math.random() * industries.length)]} company`,
     companyIndustry: industries[Math.floor(Math.random() * industries.length)],

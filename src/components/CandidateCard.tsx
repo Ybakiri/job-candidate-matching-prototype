@@ -20,6 +20,19 @@ interface CandidateCardProps {
 
 const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, onInvite }: CandidateCardProps) {
   const { t } = useTranslation()
+  
+  // Get localized title
+  const getLocalizedTitle = () => {
+    if (candidate.titleIndex !== undefined) {
+      const titles = t('candidateTitles.titles')
+      if (Array.isArray(titles) && titles[candidate.titleIndex]) {
+        return titles[candidate.titleIndex]
+      }
+    }
+    // Fallback to original title
+    return candidate.title
+  }
+  
   return (
     <div className="bg-white relative rounded border border-[#e6e6ea] transition-all duration-200 hover:shadow-card hover:border-[#d1d5db] flex flex-col h-full">
       {/* Card Content - Clickable Area */}
@@ -51,11 +64,11 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                     <div className="w-6 h-6">
                       <img alt="" className="block" src={imgFrame} />
                     </div>
-                    <h3 className="text-base font-semibold text-black leading-6">{candidate.title}</h3>
+                    <h3 className="text-base font-semibold text-black leading-6">{getLocalizedTitle()}</h3>
                   </div>
                 </Tooltip>
               ) : (
-                <h3 className="text-base font-semibold text-black leading-6">{candidate.title}</h3>
+                <h3 className="text-base font-semibold text-black leading-6">{getLocalizedTitle()}</h3>
               )}
               <span className="bg-[#d9e2fc] px-2 py-[2px] rounded-[20px] text-sm font-semibold text-[#0f204d] tracking-[-0.3px] leading-[21px] h-5 flex items-center">
                 {t('candidates.yearsExperience', { years: candidate.yearsExperience })}

@@ -31,6 +31,7 @@ export interface Candidate {
   matchScore: MatchScore
   matchPercentage: number
   title: string
+  titleIndex?: number // Index for i18n title lookup
   yearsExperience: number
   currentRole: string
   companyIndustry: string
