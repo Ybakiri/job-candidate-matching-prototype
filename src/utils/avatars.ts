@@ -1,12 +1,15 @@
 // Available avatar images - Modern circular avatar designs from Figma
 export const avatars = [
-  "/2f62fcccd9d3553669b041430837dfd0ca8dea76.svg", // Avatar 1 - Modern circular design
-  "/6091e90be7200d27b4ff012dda1fd2fa54b10678.svg", // Avatar 2 - Modern circular design
-  "/1b1f7c2820283e0237e9cc3de8472e3cae2737f2.svg", // Avatar 3 - Modern circular design
-  "/a99fc72070be6b64761a31b0ab3b5173e37b7283.svg", // Avatar 4 - Modern circular design
-  "/39d034a63b910cf01736adc47d2bdfdbea6ec547.svg", // Avatar 5 - Modern circular design
-  "/866774f3a053e3ecded2a7149c1e61fbc768dd0e.svg", // Avatar 6 - Modern circular design
-  "/114cf83b244dcd96763b689870c10b651da33de2.svg", // Avatar 7 - Modern circular design
+  "/e6c0950837c29641f74f48d474bf6838ac8a1e7b.svg", // Avatar 1 - New design from Figma
+  "/54f8c483f6a68c4caf32deeadcb67371931fbd6b.svg", // Avatar 2 - New design from Figma
+  "/0e2920525d754f3b12660b08265ba1eb4d1b556c.svg", // Avatar 3 - New design from Figma
+  "/1adc7c20b4fee7c9c2da89cdb8b3cc3cb0e8cda7.svg", // Avatar 4 - New design from Figma
+  "/f697ac88047ec076283abc2312c96440d3159e2b.svg", // Avatar 5 - New design from Figma
+  "/91a7a8969d94033f17ba5fb551700faae3f75d3a.svg", // Avatar 6 - New design from Figma
+  "/d1c93621efa238878c750cab77cb2ac32de471a9.svg", // Avatar 7 - New design from Figma
+  "/0f76fa0188451e247953aa07c2df12978481c908.svg", // Avatar 8 - New design from Figma
+  "/73bc2cd7e9c11e8506ca369d03505cf87ce2e26a.svg", // Avatar 9 - New design from Figma
+  "/dc38f20f408f56c71207e0309dba265eb685c91c.svg", // Avatar 10 - New design from Figma
 ]
 
 // Get a consistent avatar for a candidate based on their ID
