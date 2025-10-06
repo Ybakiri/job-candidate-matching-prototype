@@ -109,8 +109,8 @@ export function CandidateList() {
           </div>
         )}
 
-        {/* Candidates List */}
-        <div className="space-y-6 mb-10 pb-25">
+        {/* Candidates List - Two Column Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10 pb-25">
           {displayedCandidates.map((candidate) => (
             <CandidateCard
               key={candidate.id}
