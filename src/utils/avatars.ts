@@ -76,7 +76,9 @@ export function getSkillsToDisplay(candidate: { id: string; skills: { name: stri
 // Get count of remaining skills not displayed
 export function getSkillsOverflowCount(candidate: { id: string; skills: { name: string; matches: boolean }[] }): number {
   const matchingSkills = candidate.skills.filter(skill => skill.matches)
+  const nonMatchingSkills = candidate.skills.filter(skill => !skill.matches)
   const maxSkills = getMaxSkillsForCandidate(candidate.id)
-  const remaining = matchingSkills.length - maxSkills
-  return remaining > 0 ? remaining : 0
+  const remainingMatchingSkills = matchingSkills.length - maxSkills
+  const totalRemainingSkills = (remainingMatchingSkills > 0 ? remainingMatchingSkills : 0) + nonMatchingSkills.length
+  return totalRemainingSkills
 }
