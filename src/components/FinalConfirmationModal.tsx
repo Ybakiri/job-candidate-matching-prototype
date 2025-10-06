@@ -1,4 +1,5 @@
 import { Overlay } from './Overlay'
+import { useTranslation } from '../context/LanguageContext'
 
 // Import assets
 const imgInfo = "/5fa5d4de9a73bf8410be5e2a75547a2c33ae844e.svg"
@@ -10,6 +11,7 @@ interface FinalConfirmationModalProps {
 }
 
 export function FinalConfirmationModal({ isOpen, onClose, invitedCount }: FinalConfirmationModalProps) {
+  const { t } = useTranslation()
   if (!isOpen) return null
 
   const handleFinish = () => {
@@ -29,7 +31,7 @@ export function FinalConfirmationModal({ isOpen, onClose, invitedCount }: FinalC
           {/* Header */}
           <div className="bg-white px-6 pt-6 pb-2">
             <h2 className="text-[20px] font-bold text-[#202333] tracking-[-0.3px] leading-7">
-              Are you ready to finish?
+              {t('modal.finishTitle')}
             </h2>
           </div>
           
@@ -38,11 +40,11 @@ export function FinalConfirmationModal({ isOpen, onClose, invitedCount }: FinalC
             {/* Main Content Box */}
             <div className="border border-[#e6e6ea] rounded p-4 flex flex-col gap-3">
               <p className="text-[14px] text-[#0f204d] leading-[21px]">
-                You have invited <strong>{invitedCount} candidates</strong> to apply for your position.
+                {t('modal.finishDescription', { count: invitedCount })}
               </p>
               
               <p className="text-[14px] text-[#0f204d] leading-[21px]">
-                Once you leave this page, you won't be able to return to invite more candidates.
+                {t('modal.finishWarning')}
               </p>
             </div>
             
@@ -50,11 +52,13 @@ export function FinalConfirmationModal({ isOpen, onClose, invitedCount }: FinalC
             <div className="bg-[#f0f4ff] rounded-lg flex gap-2 items-center pl-6 pr-[31px] py-4">
               <div className="w-6 h-6 shrink-0 overflow-clip relative">
                 <div className="absolute inset-[8.333%]">
-                  <img alt="" className="icon-lg" src={imgInfo} />
+                  <div className="w-4 h-4">
+                    <img alt="" className="block" src={imgInfo} />
+                  </div>
                 </div>
               </div>
               <p className="text-[14px] text-black leading-[21px]">
-                Make sure you've invited all the candidates you're interested in before finishing.
+                {t('modal.finishReminder')}
               </p>
             </div>
           </div>
@@ -65,13 +69,13 @@ export function FinalConfirmationModal({ isOpen, onClose, invitedCount }: FinalC
               onClick={onClose}
               className="px-6 py-3 border border-[#989ba8] text-[#202333] rounded font-bold text-base leading-6 hover:border-gray-400 transition-colors"
             >
-              Continue browsing
+              {t('buttons.continueBrowsing')}
             </button>
             <button
               onClick={handleFinish}
               className="bg-[#0e0e14] text-white px-6 py-3 rounded font-bold text-base leading-6 hover:bg-[#1a1a1a] transition-colors"
             >
-              Finish and view job ad
+              {t('buttons.finishAndView')}
             </button>
           </div>
         </div>

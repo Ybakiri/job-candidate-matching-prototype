@@ -3,6 +3,7 @@ import { cn } from '../utils/cn'
 import { getAvatarForCandidate, shouldShowTitleIcon } from '../utils/avatars'
 import { Tooltip } from './Tooltip'
 import { Overlay } from './Overlay'
+import { useTranslation } from '../context/LanguageContext'
 
 // Import assets from Figma
 const imgClose = "/905f6dd1f7b91e6eac955f99fd1061badc613fcc.svg"
@@ -24,6 +25,7 @@ interface CandidateDrawerProps {
 }
 
 export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: CandidateDrawerProps) {
+  const { t } = useTranslation()
   if (!isOpen) return null
 
   return (
@@ -34,20 +36,12 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
       {/* Drawer */}
       <div className="fixed right-0 top-0 h-full w-full lg:w-3/5 bg-white shadow-xl z-50 overflow-hidden flex flex-col animate-slide-in">
         {/* Header */}
-        <div className="bg-white flex items-center justify-between px-8 py-2 rounded-tl-lg rounded-tr-lg">
+        <div className="bg-white flex items-center justify-between px-8 py-4 rounded-tl-lg rounded-tr-lg">
           <div className="flex-1" />
-          <div className="flex items-center justify-center p-1 rounded shrink-0 size-[24px]">
-            <button
-              onClick={onClose}
-              className="w-full h-full flex items-center justify-center"
-            >
-              <img alt="" className="icon-lg" src={imgClose} />
-            </button>
-          </div>
         </div>
 
         {/* Profile Header */}
-        <div className="bg-white flex items-center px-6 pb-4">
+        <div className="bg-white flex items-center px-6 pb-6">
           <div className="flex gap-4 items-center flex-1">
             {/* Avatar */}
             <div className="w-[85px] h-[85px] rounded-[68px] overflow-clip shrink-0">
@@ -66,12 +60,12 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                   <div className="flex gap-3 items-center">
                     {shouldShowTitleIcon(candidate.id) ? (
                       <Tooltip 
-                        content="This candidate is a top applicant for your position"
+                        content={t('candidateDrawer.topCandidateTooltip')}
                         position="top"
                       >
                         <div className="flex gap-1 items-center cursor-help">
                           <div className="w-6 h-6 flex items-center justify-center">
-                            <img alt="" className="icon-lg" src={imgFrame} />
+                            <img alt="" className="block" src={imgFrame} />
                           </div>
                           <h2 className="text-base font-bold text-black leading-6">{candidate.title}</h2>
                         </div>
@@ -83,7 +77,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                     )}
                     <div className="bg-[#d9e2fc] px-2 py-[2px] rounded-[20px] h-5 flex items-center">
                       <span className="text-sm font-semibold text-[#0f204d] tracking-[-0.3px] leading-[21px]">
-                        {candidate.yearsExperience} years of experience
+                        {t('candidates.yearsExperience', { years: candidate.yearsExperience })}
                       </span>
                     </div>
                   </div>
@@ -107,20 +101,34 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                     disabled
                     className="bg-[#9ED7BE] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2 cursor-not-allowed"
                   >
-                    <img alt="" className="icon-sm" src={imgCheckWhite} style={{filter: 'brightness(0) invert(1)'}} />
-                    <span className="text-base font-bold leading-6">Invited to unlock</span>
+                    <div className="w-5 h-4">
+                      <img alt="" className="block" src={imgCheckWhite} style={{filter: 'brightness(0) invert(1)'}} />
+                    </div>
+                    <span className="text-base font-bold leading-6">{t('buttons.invited')}</span>
                   </button>
                 ) : (
                   <button
                     onClick={onInvite}
                     className="bg-[#0e0e14] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2"
                   >
-                    <div className="w-6 h-6 flex items-center justify-center">
-                      <img alt="" className="icon-lg" src={imgSend} />
+                    <div className="w-6 h-5 flex items-center justify-center">
+                      <img alt="" className="block" src={imgSend} />
                     </div>
-                    <span className="text-base font-bold leading-6">Invite to unlock</span>
+                    <span className="text-base font-bold leading-6">{t('buttons.inviteToUnlock')}</span>
                   </button>
                 )}
+                
+                {/* Close Button */}
+                <div className="flex items-center justify-center p-1 rounded shrink-0 size-[27px] ml-4">
+                  <button
+                    onClick={onClose}
+                    className="w-full h-full flex items-center justify-center"
+                  >
+                    <div className="w-5 h-5">
+                      <img alt="" className="block" src={imgClose} />
+                    </div>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -131,7 +139,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
           <div className="bg-[#f9f9fa] px-6 py-8 flex flex-col gap-6">
             {/* Skills */}
             <div className="bg-white rounded p-4 flex flex-col gap-5">
-              <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">Skills</h3>
+              <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">{t('candidateDrawer.skills')}</h3>
               <div className="flex flex-wrap gap-3">
                 {candidate.skills.sort((a, b) => (b.matches ? 1 : 0) - (a.matches ? 1 : 0)).map((skill, index) => (
                   <div
@@ -142,8 +150,8 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                     )}
                   >
                     {skill.matches && (
-                      <div className="w-6 h-6 flex items-center justify-center">
-                        <img alt="" className="icon-sm" src={imgCheck} />
+                      <div className="w-5 h-4 flex items-center justify-center">
+                        <img alt="" className="block" src={imgCheck} />
                       </div>
                     )}
                     <span className="text-sm font-semibold text-[#202333] tracking-[-0.3px] leading-[21px]">
@@ -158,13 +166,15 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
             <div className="bg-white rounded p-4 flex flex-col gap-5">
               <div className="flex gap-1 items-center">
                 <Tooltip 
-                  content="This information is private until the candidate accepts your invitation"
+                  content={t('privacy.contactTooltip')}
                   position="right"
                 >
-                  <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">Contact information</h3>
+                  <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">{t('candidateDrawer.contactInfo')}</h3>
                 </Tooltip>
                 <div className="w-4 h-4 flex items-center justify-center">
-                  <img alt="" className="icon-sm" src={imgLock} />
+                  <div className="w-4 h-4">
+                    <img alt="" className="block" src={imgLock} />
+                  </div>
                 </div>
               </div>
               
@@ -187,7 +197,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
 
             {/* Education */}
             <div className="bg-white rounded p-4 flex flex-col gap-5">
-              <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">Education</h3>
+              <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">{t('candidateDrawer.education')}</h3>
               <div className="flex flex-col gap-0">
                 {candidate.education.map((edu, index) => (
                   <p key={index} className="text-base font-normal text-[#202333] leading-6">
@@ -199,7 +209,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
 
             {/* Past Experiences */}
             <div className="bg-white rounded p-4 flex flex-col gap-5">
-              <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">Past experiences</h3>
+              <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">{t('candidateDrawer.pastExperiences')}</h3>
               <div className="flex flex-col gap-0">
                 {candidate.experiences.map((exp, index) => (
                   <p key={index} className="text-base font-normal text-[#202333] leading-6">
@@ -211,24 +221,26 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
 
             {/* Insights */}
             <div className="bg-white rounded p-4 flex flex-col gap-6">
-              <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">Insights</h3>
+              <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">{t('candidateDrawer.insights')}</h3>
               
               <div className="flex flex-col gap-4">
                 <div className="flex items-center justify-between">
                   <div className="flex gap-2 items-center">
                     <div className="w-6 h-6 flex items-center justify-center">
-                      <img alt="" className="icon-lg" src={imgUpgrade} />
+                      <img alt="" className="block" src={imgUpgrade} />
                     </div>
                     <span className="text-sm font-normal text-[#2141a1] leading-4">
-                      AI generated, review information on your own.
+                      {t('candidateDrawer.aiGenerated')}
                     </span>
                   </div>
                   <div className="flex gap-1 items-center">
                     <span className="text-sm font-semibold text-[#585d72] underline">
-                      More Info
+                      {t('candidateDrawer.moreInfo')}
                     </span>
                     <div className="w-4 h-4 flex items-center justify-center">
-                      <img alt="" className="icon-sm" src={imgInfo} />
+                      <div className="w-4 h-4">
+                        <img alt="" className="block" src={imgInfo} />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -241,12 +253,12 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
               <div className="flex flex-col gap-6">
                 {/* Advantages */}
                 <div className="flex flex-col gap-4">
-                  <h4 className="text-sm font-semibold text-[#585d72]">Advantages</h4>
+                  <h4 className="text-sm font-semibold text-[#585d72]">{t('candidateDrawer.advantages')}</h4>
                   <div className="flex flex-col gap-3">
                     {candidate.insights.advantages.map((advantage, index) => (
                       <div key={index} className="flex gap-2 items-start">
                         <div className="w-6 h-6 shrink-0 flex items-center justify-center">
-                          <img alt="" className="icon-sm" src={imgAdvantage} />
+                          <img alt="" className="block" src={imgAdvantage} />
                         </div>
                         <span className="text-base font-normal text-[#202333] leading-6">
                           {advantage}
@@ -258,10 +270,10 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
 
                 {/* Disadvantages */}
                 <div className="flex flex-col gap-4">
-                  <h4 className="text-sm font-semibold text-[#585d72]">Disadvantages</h4>
+                  <h4 className="text-sm font-semibold text-[#585d72]">{t('candidateDrawer.disadvantages')}</h4>
                   <div className="flex gap-2 items-start">
                     <div className="w-6 h-6 shrink-0 flex items-center justify-center">
-                      <img alt="" className="icon-sm" src={imgDisadvantage} />
+                      <img alt="" className="block" src={imgDisadvantage} />
                     </div>
                     <span className="text-base font-normal text-[#202333] leading-6">
                       {candidate.insights.disadvantages[0]}

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useAppContext } from '../context/AppContext'
+import { useTranslation } from '../context/LanguageContext'
 import { Overlay } from './Overlay'
 
 // Import all assets
@@ -14,6 +15,7 @@ interface InvitationModalProps {
 
 export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalProps) {
   const { setShowPricingWarning } = useAppContext()
+  const { t } = useTranslation()
   const [dontShowAgain, setDontShowAgain] = useState(false)
 
   if (!isOpen) return null
@@ -36,7 +38,7 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
           {/* Header */}
           <div className="bg-white px-6 pt-6 pb-2">
             <h2 className="text-[20px] font-bold text-[#202333] tracking-[-0.3px] leading-7">
-              Confirm invitation & cost
+              {t('modal.confirmTitle')}
             </h2>
           </div>
           
@@ -45,15 +47,15 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
             {/* Main Content Box */}
             <div className="border border-[#e6e6ea] rounded p-4 flex flex-col gap-3">
               <p className="text-[14px] text-[#0f204d] leading-[21px]">
-                Each invitation incurs a small fee of <strong>CHF 40.</strong> Only pay for the applicants who answer.
+                {t('modal.costDescription')}
               </p>
               
-              <p className="text-[14px] text-black leading-[21px]">For example:</p>
+              <p className="text-[14px] text-black leading-[21px]">{t('modal.example')}</p>
               
               <ul className="text-[14px] text-black leading-[21px] list-disc ml-[21px]">
-                <li className="mb-0">Send 5 invitations → 5 candidates respond = CHF 200</li>
-                <li className="mb-0">Send 5 invitations → 2 candidates respond = CHF 80</li>
-                <li>Send 5 invitations → 0 candidates respond = CHF 0</li>
+                <li className="mb-0">{t('modal.example1')}</li>
+                <li className="mb-0">{t('modal.example2')}</li>
+                <li>{t('modal.example3')}</li>
               </ul>
             </div>
             
@@ -61,15 +63,16 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
             <div className="bg-[#f0f4ff] rounded-lg flex gap-2 items-center pl-6 pr-[31px] py-4">
               <div className="w-6 h-6 shrink-0 overflow-clip relative">
                 <div className="absolute inset-[8.333%]">
-                  <img alt="" className="icon-lg" src={imgInfo} />
+                  <div className="w-4 h-4">
+                    <img alt="" className="block" src={imgInfo} />
+                  </div>
                 </div>
               </div>
               <p className="text-[14px] text-black leading-[21px] font-bold tracking-[-0.3px]">
-                No answer, no charge.{' '}
+                {t('modal.noAnswerNoCharge')}{' '}
                 <span className="font-normal">
-                  You won't be charged if the applicant doesn't answer{' '}
+                  {t('modal.noChargeDescription')}
                 </span>
-                <span className="font-normal">until your job ad expires.</span>
               </p>
             </div>
             
@@ -93,7 +96,7 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
                     <div className="w-6 h-6 border-2 border-[#e6e6ea] rounded bg-white"></div>
                   )}
                 </div>
-                <span className="text-base text-[#202333] leading-6">Don't show this again</span>
+                <span className="text-base text-[#202333] leading-6">{t('modal.dontShowAgain')}</span>
               </label>
             </div>
           </div>
@@ -104,14 +107,16 @@ export function InvitationModal({ isOpen, onClose, onConfirm }: InvitationModalP
               onClick={onClose}
               className="px-6 py-3 border border-[#989ba8] text-[#202333] rounded font-bold text-base leading-6"
             >
-              Cancel
+              {t('buttons.cancel')}
             </button>
             <button
               onClick={handleConfirm}
               className="bg-[#0e0e14] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2 font-bold text-base leading-6"
             >
-              <img alt="" className="icon-sm" src={imgSend} />
-              Confirm invitation
+              <div className="w-5 h-4">
+                <img alt="" className="block" src={imgSend} />
+              </div>
+              {t('buttons.confirmInvitation')}
             </button>
           </div>
         </div>

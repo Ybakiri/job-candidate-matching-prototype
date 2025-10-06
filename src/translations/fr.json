@@ -5,16 +5,16 @@
   },
   "success": {
     "title": "Votre annonce sera bientôt en ligne",
-    "description": "Vous avez réservé avec succès l'un de nos produits pour votre offre d'emploi. Veuillez vérifier votre boîte de réception pour plus d'informations.",
-    "whileYouWait": "En attendant les candidats",
-    "exploreApplicants": "Explorer les candidats potentiels",
+    "description": "Vous avez commandé avec succès un produit pour votre offre d'emploi. Veuillez vérifier votre boîte de réception pour plus d'informations.",
+    "whileYouWait": "En attendant de reçevoir des candidatures",
+    "exploreApplicants": "Explorez des candidats potentiels",
     "candidatesFound": "Nous avons trouvé 43 candidats pour votre poste de",
     "position": "",
     "jobTitle": "Calculateur*trice 80-100%"
   },
   "howItWorks": {
     "title": "Comment ça marche",
-    "step1Title": "Inviter des candidats pré-sélectionnés",
+    "step1Title": "Invitez des candidats pré-sélectionnés",
     "step1Description": "Basé sur vos exigences d'emploi",
     "step2Title": "Ils reçoivent des invitations automatiques",
     "step2Description": "Les candidats voient votre intérêt et peuvent postuler immédiatement",
@@ -50,6 +50,10 @@
     "profiles": "profils de candidats",
     "yearsExperience": "{years} années d'expérience"
   },
+  "stickyFooter": {
+    "showInvitedOnly": "Afficher uniquement les candidats invités",
+    "finishAndViewJobAd": "Terminer et voir l'offre d'emploi"
+  },
   "loading": {
     "searching": "Recherche dans la base de données des candidats...",
     "analyzing": "Analyse des profils correspondants...",
@@ -69,6 +73,18 @@
     "finishDescription": "Vous avez invité {count} candidats à postuler pour votre poste.",
     "finishWarning": "Une fois que vous quittez cette page, vous ne pourrez plus revenir pour inviter d'autres candidats.",
     "finishReminder": "Assurez-vous d'avoir invité tous les candidats qui vous intéressent avant de terminer."
+  },
+  "candidateDrawer": {
+    "topCandidateTooltip": "Ce candidat est un candidat de premier plan pour votre poste",
+    "skills": "Compétences",
+    "contactInfo": "Informations de contact",
+    "education": "Éducation",
+    "pastExperiences": "Expériences passées",
+    "insights": "Aperçus",
+    "aiGenerated": "Généré par IA, veuillez vérifier les informations par vous-même.",
+    "moreInfo": "Plus d'infos",
+    "advantages": "Avantages",
+    "disadvantages": "Inconvénients"
   },
   "privacy": {
     "title": "Nous respectons la vie privée des candidats.",

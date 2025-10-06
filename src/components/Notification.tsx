@@ -40,7 +40,7 @@ export function Notification({ duration = 5000, onClose }: NotificationProps) {
       <div className="flex items-start gap-3 p-4">
         {/* Check Circle Icon */}
         <div className="w-6 h-6 shrink-0">
-          <img alt="" className="icon-lg" src={imgCheckCircle} />
+          <img alt="" className="block" src={imgCheckCircle} />
         </div>
         
         {/* Content */}

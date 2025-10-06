@@ -20,59 +20,68 @@ export function CheckoutSummary() {
     <div className="bg-[#f9f9fa] min-h-screen font-open-sans pb-[3rem]">
       <Header />
 
-      {/* Main Container */}
-      <div className="relative max-w-[1440px] mx-auto min-h-[900px]">
-        {/* Stepper - Positioned at x=394, y=88, width=652, height=79 */}
-        <div className="absolute left-[394px] top-[88px] w-[652px] h-[79px]">
-        <div className="flex items-center justify-between">
-          {/* Step 1 - x=450, y=88 */}
-          <div className="flex flex-col items-center">
-            <div className="relative w-12 h-12">
-              <img alt="" className="icon-sm" src={imgEllipse92} />
-              <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">1</div>
+      {/* Stepper */}
+      <div className="max-w-4xl mx-auto px-4 pt-16 pb-8">
+        <div className="flex items-center justify-center">
+          <div className="flex items-center space-x-8 md:space-x-16">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-12 h-12">
+                <img alt="" className="w-12 h-12" src={imgEllipse92} />
+                <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">1</div>
+              </div>
+              <span className="mt-2 text-sm text-[#202333] text-center max-w-[120px]">{t('checkout.steps.jobAd')}</span>
             </div>
-            <span className="mt-2 text-sm text-[#202333] w-40 text-center">{t('checkout.steps.jobAd')}</span>
-          </div>
-          
-          {/* Step 2 - x=614, y=88 */}
-          <div className="flex flex-col items-center">
-            <div className="relative w-12 h-12">
-              <img alt="" className="icon-sm" src={imgEllipse92} />
-              <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">2</div>
+            
+            {/* Connector Line 1 */}
+            <div className="hidden sm:block w-8 md:w-16 h-px bg-gray-300"></div>
+            
+            {/* Step 2 */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-12 h-12">
+                <img alt="" className="w-12 h-12" src={imgEllipse92} />
+                <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">2</div>
+              </div>
+              <span className="mt-2 text-sm text-[#202333] text-center max-w-[120px]">{t('checkout.steps.preview')}</span>
             </div>
-            <span className="mt-2 text-sm text-[#202333] w-40 text-center">{t('checkout.steps.preview')}</span>
-          </div>
-          
-          {/* Step 3 - x=778, y=88 */}
-          <div className="flex flex-col items-center">
-            <div className="relative w-12 h-12">
-              <img alt="" className="icon-sm" src={imgEllipse92} />
-              <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">3</div>
+            
+            {/* Connector Line 2 */}
+            <div className="hidden sm:block w-8 md:w-16 h-px bg-gray-300"></div>
+            
+            {/* Step 3 */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-12 h-12">
+                <img alt="" className="w-12 h-12" src={imgEllipse92} />
+                <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">3</div>
+              </div>
+              <span className="mt-2 text-sm text-[#202333] text-center max-w-[120px]">{t('checkout.steps.productSelection')}</span>
             </div>
-            <span className="mt-2 text-sm text-[#202333] w-40 text-center">{t('checkout.steps.productSelection')}</span>
-          </div>
-          
-          {/* Step 4 - Active - x=942, y=88 */}
-          <div className="flex flex-col items-center">
-            <div className="relative w-12 h-12">
-              <img alt="" className="icon-sm" src={imgEllipse93} />
-              <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">4</div>
+            
+            {/* Connector Line 3 */}
+            <div className="hidden sm:block w-8 md:w-16 h-px bg-gray-300"></div>
+            
+            {/* Step 4 - Active */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-12 h-12">
+                <img alt="" className="w-12 h-12" src={imgEllipse93} />
+                <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold">4</div>
+              </div>
+              <span className="mt-2 text-sm font-semibold text-[#202333] text-center max-w-[120px] tracking-tight">{t('checkout.steps.summary')}</span>
             </div>
-            <span className="mt-2 text-sm font-semibold text-[#202333] w-40 text-center tracking-tight">{t('checkout.steps.summary')}</span>
           </div>
         </div>
       </div>
 
-      {/* Title Section - x=505, y=215, width=431, height=65 */}
-      <div className="absolute left-[505px] top-[215px] w-[431px] h-[65px] text-center">
+      {/* Title Section */}
+      <div className="text-center mb-12 px-4">
         <h1 className="text-2xl font-bold text-[#202333] mb-4 tracking-tight">{t('checkout.title')}</h1>
         <p className="text-base text-[#202333]">{t('checkout.subtitle')}</p>
       </div>
 
       {/* Cards Container */}
-      <div>
-        {/* Order Details Card - x=164, y=323, width=408, height=543 */}
-        <div className="absolute left-[164px] top-[323px] w-[408px] h-[570px] bg-white rounded shadow-[0px_4px_6px_-4px_rgba(24,39,75,0.12),0px_8px_8px_-4px_rgba(24,39,75,0.08)] p-6">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-6">
+        {/* Order Details Card */}
+        <div className="lg:w-2/5 bg-white rounded shadow-[0px_4px_6px_-4px_rgba(24,39,75,0.12),0px_8px_8px_-4px_rgba(24,39,75,0.08)] p-6 h-fit">
           <h2 className="text-xl font-bold text-[#202333] mb-6">{t('checkout.orderDetails.title')}</h2>
           
           <div className="mb-6">
@@ -89,13 +98,13 @@ export function CheckoutSummary() {
           </button>
         </div>
         
-        {/* Order Summary Card - x=588, y=323, width=688, height=543 */}
-        <div className="absolute left-[588px] top-[323px] w-[688px] h-[570px] bg-white rounded shadow-[0px_4px_6px_-4px_rgba(24,39,75,0.12),0px_8px_8px_-4px_rgba(24,39,75,0.08)] p-8">
+        {/* Order Summary Card */}
+        <div className="lg:w-3/5 bg-white rounded shadow-[0px_4px_6px_-4px_rgba(24,39,75,0.12),0px_8px_8px_-4px_rgba(24,39,75,0.08)] p-8 h-fit">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-xl font-bold text-[#202333]">{t('checkout.orderSummary.title')}</h2>
           {/* Jobs.ch logo - x=620, y=355, width=103.125, height=20 */}
           <div className="w-[103px] h-5">
-            <img alt="jobs.ch" className="block max-w-none h-full" src={imgJobsLogo} />
+            <img alt="jobs.ch" className="block h-full" src={imgJobsLogo} />
           </div>
         </div>
         
@@ -151,7 +160,9 @@ export function CheckoutSummary() {
                 className="bg-[#222222] text-white px-5 pr-6 py-3 rounded flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors font-bold"
               >
                 <div className="w-6 h-6">
-                  <img alt="" className="icon-sm" src={imgSend} />
+                  <div className="w-5 h-5">
+                    <img alt="" className="block" src={imgSend} />
+                  </div>
                 </div>
                 <span className="text-base leading-6">{t('checkout.orderSummary.publishNow')}</span>
               </button>
@@ -159,7 +170,6 @@ export function CheckoutSummary() {
           </div>
         </div>
         </div>
-      </div>
       </div>
     </div>
   )

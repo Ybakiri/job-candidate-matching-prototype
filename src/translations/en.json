@@ -50,6 +50,10 @@
     "profiles": "candidate profiles",
     "yearsExperience": "{years} years of experience"
   },
+  "stickyFooter": {
+    "showInvitedOnly": "Show invited candidates only",
+    "finishAndViewJobAd": "Finish and view job ad"
+  },
   "loading": {
     "searching": "Searching candidate database...",
     "analyzing": "Analyzing matching profiles...",
@@ -69,6 +73,18 @@
     "finishDescription": "You have invited {count} candidates to apply for your position.",
     "finishWarning": "Once you leave this page, you won't be able to return to invite more candidates.",
     "finishReminder": "Make sure you've invited all the candidates you're interested in before finishing."
+  },
+  "candidateDrawer": {
+    "topCandidateTooltip": "This candidate is a top applicant for your position",
+    "skills": "Skills",
+    "contactInfo": "Contact information",
+    "education": "Education",
+    "pastExperiences": "Past experiences",
+    "insights": "Insights",
+    "aiGenerated": "AI generated, review information on your own.",
+    "moreInfo": "More Info",
+    "advantages": "Advantages",
+    "disadvantages": "Disadvantages"
   },
   "privacy": {
     "title": "We respect candidate privacy.",

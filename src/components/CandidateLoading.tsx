@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { SkeletonCandidateCard } from './SkeletonCandidateCard'
 import { useTranslation } from '../context/LanguageContext'
 
@@ -10,11 +10,11 @@ interface CandidateLoadingProps {
 export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
   const { t } = useTranslation()
   
-  const messages = [
+  const messages = useMemo(() => [
     t('loading.searching'),
     t('loading.analyzing'),
     t('loading.ranking')
-  ]
+  ], [t])
   
   const [currentMessage, setCurrentMessage] = useState(messages[0])
 
@@ -39,7 +39,7 @@ export function CandidateLoading({ onLoadingComplete }: CandidateLoadingProps) {
       clearInterval(messageTimer)
       clearTimeout(completeTimer)
     }
-  }, [onLoadingComplete])
+  }, [onLoadingComplete, messages])
 
   return (
     <div id="candidates-section" className="border-t border-neutral-100 mt-8">

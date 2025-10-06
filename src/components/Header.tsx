@@ -20,7 +20,7 @@ export function Header({ showBackButton = true, backTo = '/', backText = 'Return
         {showBackButton && (
           <Link to={backTo} className="flex items-center gap-2">
             <div className="w-6 h-6 flex items-center justify-center">
-              <img alt="Back" className="icon-lg" src={imgChevronLeft} />
+              <img alt="Back" className="block" src={imgChevronLeft} />
             </div>
             <div className="text-[#e6e6ea] text-base font-normal">
               {backText}
@@ -33,14 +33,14 @@ export function Header({ showBackButton = true, backTo = '/', backText = 'Return
         <button className="flex items-center gap-2 pl-[12px] pr-[8px] py-[4px]">
           <span className="text-[#b8bac3] text-[14px] font-semibold tracking-[-0.3px] underline">FR</span>
           <div className="w-6 h-6 flex items-center justify-center">
-            <img alt="Language dropdown" className="icon-lg" src={imgChevronDown} />
+            <img alt="Language dropdown" className="block" src={imgChevronDown} />
           </div>
         </button>
         
         <div className="flex items-center gap-[4px]">
           <div className="relative w-10 h-10">
             <div className="absolute inset-0">
-              <img alt="" className="block max-w-none size-full" src={imgAvatar} />
+              <img alt="" className="block size-full" src={imgAvatar} />
             </div>
             <div 
               className="absolute inset-0"
@@ -51,11 +51,11 @@ export function Header({ showBackButton = true, backTo = '/', backText = 'Return
                 maskRepeat: 'no-repeat'
               }}
             >
-              <img alt="" className="absolute inset-0 max-w-none object-center object-cover pointer-events-none size-full" src={imgUserPhoto} />
+              <img alt="" className="absolute inset-0 object-center object-cover pointer-events-none size-full" src={imgUserPhoto} />
             </div>
           </div>
           <div className="w-6 h-6 flex items-center justify-center">
-            <img alt="User menu" className="icon-sm" src={imgChevronDown} />
+            <img alt="User menu" className="block" src={imgChevronDown} />
           </div>
         </div>
       </div>

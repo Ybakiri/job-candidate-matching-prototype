@@ -50,6 +50,10 @@
     "profiles": "Kandidatenprofile",
     "yearsExperience": "{years} Jahre Erfahrung"
   },
+  "stickyFooter": {
+    "showInvitedOnly": "Nur eingeladene Kandidaten anzeigen",
+    "finishAndViewJobAd": "Beenden und Stellenanzeige anzeigen"
+  },
   "loading": {
     "searching": "Durchsuche Kandidatendatenbank...",
     "analyzing": "Analysiere passende Profile...",
@@ -69,6 +73,18 @@
     "finishDescription": "Sie haben {count} Kandidaten eingeladen, sich für Ihre Position zu bewerben.",
     "finishWarning": "Sobald Sie diese Seite verlassen, können Sie nicht mehr zurückkehren, um weitere Kandidaten einzuladen.",
     "finishReminder": "Stellen Sie sicher, dass Sie alle Kandidaten eingeladen haben, die Sie interessieren, bevor Sie abschließen."
+  },
+  "candidateDrawer": {
+    "topCandidateTooltip": "Dieser Kandidat ist ein Top-Bewerber für Ihre Position",
+    "skills": "Fähigkeiten",
+    "contactInfo": "Kontaktinformationen",
+    "education": "Bildung",
+    "pastExperiences": "Berufserfahrung",
+    "insights": "Erkenntnisse",
+    "aiGenerated": "KI-generiert, bitte überprüfen Sie die Informationen selbst.",
+    "moreInfo": "Mehr Infos",
+    "advantages": "Vorteile",
+    "disadvantages": "Nachteile"
   },
   "privacy": {
     "title": "Wir respektieren die Privatsphäre der Kandidaten.",

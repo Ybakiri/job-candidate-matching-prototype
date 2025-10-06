@@ -49,7 +49,9 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                     position="top"
                   >
                     <div className="flex items-center gap-1 cursor-help">
-                      <img alt="" className="icon-lg" src={imgFrame} />
+                      <div className="w-6 h-6">
+                        <img alt="" className="block" src={imgFrame} />
+                      </div>
                       <h3 className="text-base font-semibold text-black leading-6">{candidate.title}</h3>
                     </div>
                   </Tooltip>
@@ -81,7 +83,9 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                   disabled
                   className="bg-[#9ED7BE] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2 cursor-not-allowed"
                 >
-                  <img alt="" className="icon-sm" src={imgCheckWhite} style={{filter: 'brightness(0) invert(1)'}} />
+                  <div className="w-5 h-4">
+                    <img alt="" className="block" src={imgCheckWhite} style={{filter: 'brightness(0) invert(1)'}} />
+                  </div>
                   <span className="text-base font-bold leading-6">{t('buttons.invited')}</span>
                 </button>
               ) : (
@@ -92,7 +96,9 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                   }}
                   className="bg-[#0e0e14] text-white pl-5 pr-6 py-3 rounded flex items-center gap-2 hover:bg-[#1a1a1a] transition-colors duration-200"
                 >
-                  <img alt="" className="icon-lg" src={imgSend} />
+                  <div className="w-5 h-4">
+                    <img alt="" className="block" src={imgSend} />
+                  </div>
                   <span className="text-base font-bold leading-6">{t('buttons.inviteToUnlock')}</span>
                 </button>
               )}
@@ -104,7 +110,9 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                 }}
                 className="w-12 h-12 p-3 border border-[#989ba8] rounded flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
               >
-                <img alt="View details" className="icon-lg" src={imgEye} />
+                <div className="w-6 h-5">
+                  <img alt="View details" className="block" src={imgEye} />
+                </div>
               </button>
             </div>
           </div>
@@ -119,7 +127,9 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                 key={index}
                 className="h-7 px-3 py-[5.5px] rounded-[40px] flex items-center gap-2 bg-[#e6f5ee]"
               >
-                <img alt="" className="icon-sm" src={imgCheck} />
+                <div className="w-4 h-3">
+                  <img alt="" className="block" src={imgCheck} />
+                </div>
                 <span className="text-sm font-semibold text-[#202333] tracking-[-0.3px] leading-[21px]">
                   {skill.name}
                 </span>
@@ -167,7 +177,9 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
                 >
                   <h4 className="text-base font-bold text-[#202333] leading-6">{t('candidates.contactInfo')}</h4>
                 </Tooltip>
-                <img alt="" className="icon-sm" src={imgLock} />
+                <div className="w-4 h-4">
+                  <img alt="" className="block" src={imgLock} />
+                </div>
               </div>
               
               <div className="flex flex-col gap-2">

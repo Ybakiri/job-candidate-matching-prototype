@@ -44,10 +44,11 @@ function appReducer(state: AppState, action: AppAction): AppState {
       return {
         ...state,
         ...action.state,
-        invitedIds: [], // Always start with empty invitedIds
+        // Always ensure candidates and invitedIds are reset properly
+        invitedIds: [], 
         candidates: mockCandidates.map(candidate => ({
           ...candidate,
-          isInvited: false // Reset all candidates to not invited
+          isInvited: false
         }))
       }
     

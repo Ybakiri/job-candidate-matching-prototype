@@ -43,7 +43,7 @@ export function SuccessPage() {
         <div className="bg-[#e6f5ee] w-full rounded-lg flex gap-4 items-center pl-6 pr-8 py-4">
           <div className="flex-1 flex items-start gap-2">
             <div className="w-6 h-6 shrink-0">
-              <img alt="" className="icon-lg" src={imgCheckCircle} />
+              <img alt="" className="block" src={imgCheckCircle} />
             </div>
             <div className="flex-1">
               <h3 className="text-sm font-bold text-[#202333] tracking-[-0.3px] leading-[21px] mb-1">
@@ -84,7 +84,7 @@ export function SuccessPage() {
           </div>
 
           {/* Two Column Layout */}
-          <div className="w-full flex gap-[44px] items-start justify-center h-[414px]">
+          <div className="w-full flex gap-[44px] items-start justify-center h-[auto]">
             {/* Left Column - Content */}
             <div className="flex flex-col gap-[24px] items-center w-[588px]">
               <div className="flex flex-col gap-[24px] items-start w-full">
@@ -93,7 +93,7 @@ export function SuccessPage() {
                   {/* Step 1 */}
                   <div className="flex gap-4 items-start">
                     <div className="w-6 h-6 shrink-0 overflow-hidden">
-                      <img alt="" className="icon-lg" src={imgFrame} />
+                      <img alt="" className="block" src={imgFrame} />
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
@@ -107,8 +107,8 @@ export function SuccessPage() {
 
                   {/* Step 2 */}
                   <div className="flex gap-4 items-start">
-                    <div className="w-6 h-6 shrink-0 overflow-hidden">
-                      <img alt="" className="icon-lg" src={imgEmail} />
+                    <div className="w-5 h-4 shrink-0 overflow-hidden">
+                      <img alt="" className="block" src={imgEmail} />
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
@@ -123,7 +123,7 @@ export function SuccessPage() {
                   {/* Step 3 */}
                   <div className="flex gap-4 items-start">
                     <div className="w-6 h-6 shrink-0 overflow-hidden">
-                      <img alt="" className="icon-lg" src={imgTipsAndUpdates} />
+                      <img alt="" className="block" src={imgTipsAndUpdates} />
                     </div>
                     <div className="flex-1 flex flex-col gap-1">
                       <h3 className="text-base font-bold text-[#202333] leading-6">
@@ -141,19 +141,25 @@ export function SuccessPage() {
               {/* Features Box */}
               <div className="border border-[#e6e6ea] rounded p-3 flex flex-col gap-3 w-full">
                   <div className="flex items-center gap-2">
-                    <img alt="" className="icon-sm" src={imgCheck} />
+                    <div className="w-4 h-4">
+                      <img alt="" className="block" src={imgCheck} />
+                    </div>
                     <span className="text-sm text-[#202333] leading-[21px]">
                       {t('features.answerRate')}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <img alt="" className="icon-sm" src={imgCheck} />
+                    <div className="w-4 h-4">
+                      <img alt="" className="block" src={imgCheck} />
+                    </div>
                     <span className="text-sm text-[#202333] leading-[21px]">
                       {t('features.responseTime')}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <img alt="" className="icon-sm" src={imgCheck} />
+                    <div className="w-4 h-4">
+                      <img alt="" className="block" src={imgCheck} />
+                    </div>
                     <span className="text-sm text-[#202333] leading-[21px]">
                       {t('features.pricing')}
                     </span>
@@ -167,7 +173,9 @@ export function SuccessPage() {
                       onClick={handleBrowseCandidates}
                       className="flex-1 bg-[#0e0e14] text-white px-[24px] py-[12px] rounded-[4px] flex items-center justify-center gap-2 font-bold text-base leading-6"
                     >
-                      <img alt="" className="icon-lg" src={imgEye} />
+                      <div className="w-5 h-5">
+                        <img alt="" className="block" src={imgEye} />
+                      </div>
                       {t('buttons.browseCandidate')}
                     </button>
                   ) : showCandidates ? (
@@ -184,7 +192,7 @@ export function SuccessPage() {
               <div className="w-[413px] h-[339px] relative">
                 <img 
                   alt="Candidate mockup" 
-                  className="absolute inset-0 max-w-none size-full" 
+                  className="absolute inset-0 size-full" 
                   src={imgMockup} 
                 />
               </div>

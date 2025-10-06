@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { useAppContext } from '../context/AppContext'
+import { useTranslation } from '../context/LanguageContext'
 import { FinalConfirmationModal } from './FinalConfirmationModal'
 
 export function StickyFooter() {
   const { state, toggleFilterInvited } = useAppContext()
+  const { t } = useTranslation()
   const [showFinalModal, setShowFinalModal] = useState(false)
 
   const invitedCount = state.invitedIds.length
@@ -32,7 +34,7 @@ export function StickyFooter() {
                 </div>
               </div>
               <div className="flex flex-col font-open-sans font-normal justify-center leading-0 relative shrink-0 text-[#202333] text-base text-nowrap">
-                <p className="leading-6 whitespace-pre">Show invited candidates only</p>
+                <p className="leading-6 whitespace-pre">{t('stickyFooter.showInvitedOnly')}</p>
               </div>
             </button>
           )}
@@ -44,7 +46,7 @@ export function StickyFooter() {
               className="box-border content-stretch flex gap-2 items-center justify-center overflow-clip px-6 py-3 relative hover:border-gray-400 transition-colors"
             >
               <div className="flex flex-col font-open-sans font-semibold justify-center leading-0 relative shrink-0 text-[#202333] text-base text-center text-nowrap">
-                <p className="leading-6 whitespace-pre font-bold">Finish and view job ad</p>
+                <p className="leading-6 whitespace-pre font-bold">{t('stickyFooter.finishAndViewJobAd')}</p>
               </div>
             </button>
           </div>
