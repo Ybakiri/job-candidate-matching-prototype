@@ -10,7 +10,7 @@ export type Language = 'en' | 'de' | 'fr'
 interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
-  t: (key: string, params?: Record<string, string | number>) => string
+  t: (key: string, params?: Record<string, string | number>) => any
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -49,7 +49,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   }
 
   // Translation function with nested key support and parameter interpolation
-  const t = (key: string, params?: Record<string, string | number>): string => {
+  const t = (key: string, params?: Record<string, string | number>): any => {
     const keys = key.split('.')
     let value: any = translations[language]
 
@@ -62,18 +62,23 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       }
     }
 
-    if (typeof value !== 'string') {
-      return key
+    // If it's a string, handle parameter interpolation
+    if (typeof value === 'string') {
+      if (params) {
+        return value.replace(/\{(\w+)\}/g, (match, paramKey) => {
+          return params[paramKey]?.toString() || match
+        })
+      }
+      return value
     }
 
-    // Replace parameters in the string
-    if (params) {
-      return value.replace(/\{(\w+)\}/g, (match, paramKey) => {
-        return params[paramKey]?.toString() || match
-      })
+    // If it's an array or object, return as-is for complex data structures
+    if (Array.isArray(value) || typeof value === 'object') {
+      return value
     }
 
-    return value
+    // Fallback for other types
+    return key
   }
 
   const value: LanguageContextType = {
