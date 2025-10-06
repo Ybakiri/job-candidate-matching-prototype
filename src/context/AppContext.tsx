@@ -87,17 +87,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, [])
 
   // Save state to localStorage whenever it changes (debounced)
+  // Note: showPricingWarning is excluded to reset on page reload
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       const stateToSave = {
-        showPricingWarning: state.showPricingWarning,
         filterInvitedOnly: state.filterInvitedOnly,
       }
       localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave))
     }, 500) // Debounce localStorage writes
 
     return () => clearTimeout(timeoutId)
-  }, [state.showPricingWarning, state.filterInvitedOnly])
+  }, [state.filterInvitedOnly])
 
   const inviteCandidate = useCallback((candidateId: string) => {
     dispatch({ type: 'INVITE_CANDIDATE', candidateId })
