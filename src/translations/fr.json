@@ -5,32 +5,32 @@
   },
   "success": {
     "title": "Votre annonce sera bientôt en ligne",
-    "description": "Vous avez commandé avec succès un produit pour votre offre d'emploi. Veuillez vérifier votre boîte de réception pour plus d'informations.",
+    "description": "Vous avez posté votre annonce avec succès. Veuillez vérifier votre boîte de réception pour plus d'informations.",
     "whileYouWait": "En attendant de reçevoir des candidatures",
-    "exploreApplicants": "Explorez des candidats potentiels",
     "candidatesFound": "Nous avons trouvé 43 candidats pour votre poste de",
     "position": "",
     "jobTitle": "Manager CRM 80%-100% (h/f/d)"
   },
   "howItWorks": {
     "title": "Comment ça marche",
-    "step1Title": "Invitez des candidats pré-sélectionnés",
-    "step1Description": "Basé sur vos exigences d'emploi",
-    "step2Title": "Ils reçoivent des invitations automatiques",
+    "step1Title": "Recherchez des candidats",
+    "step1Description": "Sélectionnées par notre algorithme et basés sur vos exigences de poste",
+    "step2Title": "Invitez-les à postuler à votre offre d'emploi",
     "step2Description": "Les candidats voient votre intérêt et peuvent postuler immédiatement",
-    "step3Title": "Ne payez que ce que vous obtenez",
-    "step3Description": "Tarification transparente par réponse, aucun frais caché."
+    "step3Title": "Ne payez que pour les invitations acceptées",
+    "step3Description": "Une tarification transparente par réponse, aucun frais caché"
   },
   "features": {
-    "answerRate": "Taux de réponse de 90% typiquement",
+    "answerRate": "Taux de réponse typique de 90%",
     "responseTime": "Les candidats répondent en quelques heures",
     "pricing": "À partir de CHF 40.- par réponse"
   },
   "buttons": {
     "browseCandidate": "Parcourir 43 candidats correspondants",
-    "inviteToUnlock": "Inviter pour débloquer",
-    "invited": "Invité pour débloquer",
+    "inviteToUnlock": "Inviter à postuler",
+    "invited": "Invité à postuler",
     "viewDetails": "Voir les détails",
+    "viewProfile": "Voir le profil",
     "confirmInvitation": "Confirmer l'invitation",
     "cancel": "Annuler",
     "continueBrowsing": "Continuer à parcourir",
@@ -38,17 +38,21 @@
     "showMore": "Afficher plus ({count} restants)"
   },
   "candidates": {
-    "matchesFound": "{count} correspondances trouvées",
+    "matchesFound": "{count} candidats trouvées",
     "description": "Notre algorithme de correspondance a sélectionné les candidats les plus pertinents pour votre poste. Chaque profil a été analysé et classé.",
     "loadingTitle": "Chargement de vos candidats correspondants...",
     "readyToHire": "Prêt à embaucher ?",
     "bestCandidates": "Les meilleurs candidats sont embauchés rapidement !",
     "contactInfo": "Informations de contact",
     "education": "Éducation",
+    "moreEducation": "+{count} de plus",
     "pastExperiences": "Expériences passées",
+    "experienceFormat": "{role} en {industry}",
+    "moreExperiences": "+{count} de plus",
     "showInvitedOnly": "Afficher uniquement les candidats invités",
     "profiles": "profils de candidats",
-    "yearsExperience": "{years} années d'expérience"
+    "yearsExperience": "{years} années d'expérience",
+    "currentRoleFormat": "{role} en {industry}"
   },
   "stickyFooter": {
     "showInvitedOnly": "Afficher uniquement les candidats invités",
@@ -61,7 +65,7 @@
   },
   "modal": {
     "confirmTitle": "Confirmer l'invitation et le coût",
-    "costDescription": "Chaque invitation entraîne des frais modiques de CHF 40. Ne payez que pour les candidats qui répondent.",
+    "costDescription": "Chaque invitation entraîne des frais de CHF 40. Ne payez que pour les candidats qui répondent.",
     "example": "Par exemple :",
     "example1": "Envoyer 5 invitations → 5 candidats répondent = CHF 200",
     "example2": "Envoyer 5 invitations → 2 candidats répondent = CHF 80",
@@ -69,13 +73,13 @@
     "noAnswerNoCharge": "Pas de réponse, pas de frais.",
     "noChargeDescription": "Vous ne serez pas facturé si le candidat ne répond pas jusqu'à l'expiration de votre offre d'emploi.",
     "dontShowAgain": "Ne plus afficher",
-    "finishTitle": "Êtes-vous prêt à terminer ?",
+    "finishTitle": "Voulez-vous vraiment terminer ?",
     "finishDescription": "Vous avez invité {count} candidats à postuler pour votre poste.",
     "finishWarning": "Une fois que vous quittez cette page, vous ne pourrez plus revenir pour inviter d'autres candidats.",
     "finishReminder": "Assurez-vous d'avoir invité tous les candidats qui vous intéressent avant de terminer."
   },
   "candidateDrawer": {
-    "topCandidateTooltip": "Ce candidat est un candidat de premier plan pour votre poste",
+    "topCandidateTooltip": "Ce candidat est très qualifié pour votre poste",
     "skills": "Compétences",
     "contactInfo": "Informations de contact",
     "education": "Éducation",
@@ -86,9 +90,13 @@
     "advantages": "Avantages",
     "disadvantages": "Inconvénients"
   },
+  "notification": {
+    "invitationSent": "Invitation envoyée",
+    "invitationDescription": "Le candidat recevra une notification et pourra postuler immédiatement"
+  },
   "privacy": {
     "title": "Nous respectons la vie privée des candidats.",
-    "description": "Les coordonnées ne sont partagées qu'après que les candidats acceptent votre invitation pour maintenir la confiance et respecter les réglementations sur la vie privée.",
+    "description": "Les coordonnées ne sont partagées qu'après que les candidats acceptent votre invitation, pour maintenir la confiance et respecter les réglementations sur la vie privée.",
     "contactTooltip": "Ces informations sont privées jusqu'à ce que le candidat accepte votre invitation",
     "dismiss": "Ignorer"
   },
@@ -119,6 +127,39 @@
       "termsText": "En continuant, vous acceptez nos conditions générales et reconnaissez notre politique de protection des données.",
       "publishNow": "Publier maintenant"
     }
+  },
+  "education": {
+    "degrees": {
+      "masterBusinessAdmin": "Master en Administration des Affaires",
+      "bachelorMarketing": "Licence en Marketing",
+      "masterMarketing": "Master en Marketing",
+      "bachelorBusinessAdmin": "Licence en Administration des Affaires",
+      "masterDigitalMarketing": "Master en Marketing Digital",
+      "bachelorCommunications": "Licence en Communication"
+    }
+  },
+  "insights": {
+    "summaries": [
+      "Ce candidat apporte {years} années d'expérience solide en CRM et gestion de la relation client avec une forte maîtrise de Salesforce et de l'automatisation marketing. Il a démontré des succès en fidélisation client et génération de leads mais manque d'expérience spécifique dans l'industrie automobile.",
+      "Avec {years} années en customer success et gestion CRM, ce professionnel possède une expertise prouvée en segmentation client et marketing data-driven. Son expérience multi-sectorielle apporte une perspective précieuse pour les stratégies de relation client.",
+      "Ce professionnel CRM combine {years} années d'expérience pratique avec l'analyse client et la gestion des relations. Il a implémenté avec succès des solutions CRM qui ont amélioré les taux de rétention client et la conversion des ventes."
+    ],
+    "advantages": [
+      "Possède une vaste expérience avec les plateformes CRM Salesforce et HubSpot.",
+      "Historique prouvé en stratégies de rétention client et réduction du taux d'attrition.",
+      "Fortes compétences analytiques avec expérience en segmentation et ciblage client.",
+      "Succès démontré dans les campagnes d'email marketing et l'automatisation.",
+      "Expérience dans la direction d'équipes transversales entre ventes et marketing.",
+      "Excellentes compétences en communication en allemand, français et anglais.",
+      "A géré efficacement des bases de données clients de plus de 10 000 contacts.",
+      "Capacité prouvée d'augmenter la valeur vie client par des initiatives stratégiques."
+    ],
+    "disadvantages": [
+      "Expérience directe limitée dans l'industrie automobile et les opérations de concessionnaires.",
+      "Pas de certification formelle dans les plateformes CRM avancées comme Microsoft Dynamics.",
+      "Peut nécessiter une formation supplémentaire sur le parcours client spécifique à l'automobile.",
+      "Expérience limitée avec les intégrations CRM au niveau entreprise et la migration de données."
+    ]
   },
   "candidateTitles": {
     "titles": [

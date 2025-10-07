@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { X } from 'lucide-react'
+import { useTranslation } from '../context/LanguageContext'
 
 // Import assets
 const imgCheckCircle = "/3aa1e8c480fcf31fa45b874c46723385435e08af.svg"
@@ -10,6 +11,7 @@ interface NotificationProps {
 }
 
 export function Notification({ duration = 5000, onClose }: NotificationProps) {
+  const { t } = useTranslation()
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -46,10 +48,10 @@ export function Notification({ duration = 5000, onClose }: NotificationProps) {
         {/* Content */}
         <div className="flex-1">
           <h3 className="text-base font-bold text-[#202333] leading-6 mb-1">
-            Invitation sent
+            {t('notification.invitationSent')}
           </h3>
           <p className="text-xs text-[#585d72] leading-[18px]">
-            The candidate will receive a notification and can apply immediately
+            {t('notification.invitationDescription')}
           </p>
         </div>
         

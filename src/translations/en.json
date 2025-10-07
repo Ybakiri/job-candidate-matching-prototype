@@ -7,9 +7,8 @@
     "title": "Your ad will be online soon",
     "description": "You have successfully booked one of our products for your job advertisement. Please check your inbox for more information.",
     "whileYouWait": "While you wait for candidates",
-    "exploreApplicants": "Explore potential applicants",
-    "candidatesFound": "We have found 43 candidates for your",
-    "position": "position",
+    "candidatesFound": "We have found 43 candidates for your position",
+    "position": "",
     "jobTitle": "CRM Manager 80%-100% (m/f/d)"
   },
   "howItWorks": {
@@ -31,6 +30,7 @@
     "inviteToUnlock": "Invite to unlock",
     "invited": "Invited to unlock",
     "viewDetails": "View details",
+    "viewProfile": "View profile",
     "confirmInvitation": "Confirm invitation",
     "cancel": "Cancel",
     "continueBrowsing": "Continue browsing",
@@ -45,10 +45,14 @@
     "bestCandidates": "The best candidates get hired quickly!",
     "contactInfo": "Contact information",
     "education": "Education",
+    "moreEducation": "+{count} more",
     "pastExperiences": "Past experiences",
+    "experienceFormat": "{role} in a {industry} company",
+    "moreExperiences": "+{count} more",
     "showInvitedOnly": "Show invited candidates only",
     "profiles": "candidate profiles",
-    "yearsExperience": "{years} years of experience"
+    "yearsExperience": "{years} years of experience",
+    "currentRoleFormat": "{role} at a {industry} company"
   },
   "stickyFooter": {
     "showInvitedOnly": "Show invited candidates only",
@@ -86,6 +90,10 @@
     "advantages": "Advantages",
     "disadvantages": "Disadvantages"
   },
+  "notification": {
+    "invitationSent": "Invitation sent",
+    "invitationDescription": "The candidate will receive a notification and can apply immediately"
+  },
   "privacy": {
     "title": "We respect candidate privacy.",
     "description": "Contact details are only shared after candidates accept your invitation to maintain trust and comply with privacy regulations.",
@@ -119,6 +127,39 @@
       "termsText": "By continuing, you accept our Terms and Conditions and acknowledge our Data Protection policy.",
       "publishNow": "Publish now"
     }
+  },
+  "education": {
+    "degrees": {
+      "masterBusinessAdmin": "Master in Business Administration",
+      "bachelorMarketing": "Bachelor in Marketing",
+      "masterMarketing": "Master in Marketing",
+      "bachelorBusinessAdmin": "Bachelor in Business Administration",
+      "masterDigitalMarketing": "Master in Digital Marketing",
+      "bachelorCommunications": "Bachelor in Communications"
+    }
+  },
+  "insights": {
+    "summaries": [
+      "This candidate brings {years} years of solid CRM and customer relationship experience with strong proficiency in Salesforce and marketing automation. They have demonstrated success in customer retention and lead generation but lack specific automotive industry experience.",
+      "With {years} years in customer success and CRM management, this professional has proven expertise in customer segmentation and data-driven marketing. Their cross-industry experience provides valuable perspective for customer relationship strategies.",
+      "This CRM professional combines {years} years of hands-on experience with customer analytics and relationship management. They have successfully implemented CRM solutions that improved customer retention rates and sales conversion."
+    ],
+    "advantages": [
+      "Has extensive experience with Salesforce and HubSpot CRM platforms.",
+      "Proven track record in customer retention and churn reduction strategies.",
+      "Strong analytical skills with experience in customer segmentation and targeting.",
+      "Demonstrated success in email marketing campaigns and automation.",
+      "Experience in leading cross-functional teams across sales and marketing.",
+      "Excellent communication skills in German, French, and English.",
+      "Has managed customer databases with 10,000+ contacts effectively.",
+      "Proven ability to increase customer lifetime value through strategic initiatives."
+    ],
+    "disadvantages": [
+      "Limited direct experience in the automotive industry and dealership operations.",
+      "No formal certification in advanced CRM platforms like Microsoft Dynamics.",
+      "May require additional training in automotive-specific customer journey mapping.",
+      "Limited experience with enterprise-level CRM integrations and data migration."
+    ]
   },
   "candidateTitles": {
     "titles": [

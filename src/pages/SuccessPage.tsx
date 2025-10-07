@@ -71,15 +71,13 @@ export function SuccessPage() {
             </div>
             <div className="flex flex-col gap-2 items-center">
               <h1 className="text-[28px] font-bold text-[#202333] leading-[34px] tracking-[-1px] text-center">
-                {t('success.exploreApplicants')}
-              </h1>
-              <div className="flex items-center gap-2">
-                <span className="text-base font-normal text-[#202333] leading-6">{t('success.candidatesFound')}</span>
-                <div className="bg-[#e6f5ee] px-[6px] py-[2px] rounded-lg">
+                {t('success.candidatesFound')}
+                <br />
+                <div className="bg-[#e6f5ee] px-[6px] py-[2px] rounded-lg inline-flex items-center mx-2">
                   <span className="text-sm font-semibold text-black tracking-[-0.3px] leading-[21px]">{t('success.jobTitle')}</span>
                 </div>
-                <span className="text-base font-normal text-[#202333] leading-6">{t('success.position')}</span>
-              </div>
+                {t('success.position')}
+              </h1>
             </div>
           </div>
 

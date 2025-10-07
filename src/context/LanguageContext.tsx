@@ -50,11 +50,25 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
 
   // Translation function with nested key support and parameter interpolation
   const t = (key: string, params?: Record<string, string | number>): any => {
+    // Split by dots but handle array notation
     const keys = key.split('.')
     let value: any = translations[language]
 
     for (const k of keys) {
-      if (value && typeof value === 'object' && k in value) {
+      // Check if this key contains array notation like "summaries[0]"
+      const arrayMatch = k.match(/^(\w+)\[(\d+)\]$/)
+      
+      if (arrayMatch) {
+        const arrayKey = arrayMatch[1]
+        const index = parseInt(arrayMatch[2])
+        
+        if (value && typeof value === 'object' && arrayKey in value && Array.isArray(value[arrayKey])) {
+          value = value[arrayKey][index]
+        } else {
+          // Fallback: return the key if translation not found
+          return key
+        }
+      } else if (value && typeof value === 'object' && k in value) {
         value = value[k]
       } else {
         // Fallback: return the key if translation not found

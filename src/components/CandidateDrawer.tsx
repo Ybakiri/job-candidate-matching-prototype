@@ -98,7 +98,13 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                 
                 {/* Role */}
                 <p className="text-sm font-semibold text-[#585d72] tracking-[-0.3px] leading-[21px]">
-                  {candidate.currentRole}
+                  {candidate.currentRoleTitle && candidate.currentRoleIndustry ? 
+                    t('candidates.currentRoleFormat', { 
+                      role: candidate.currentRoleTitle, 
+                      industry: candidate.currentRoleIndustry 
+                    }) : 
+                    candidate.currentRole
+                  }
                 </p>
                 
                 {/* Location */}
@@ -214,7 +220,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
               <div className="flex flex-col gap-0">
                 {candidate.education.map((edu, index) => (
                   <p key={index} className="text-base font-normal text-[#202333] leading-6">
-                    {edu.degree}
+                    {t(`education.degrees.${edu.degree}`)}
                   </p>
                 ))}
               </div>
@@ -226,7 +232,7 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
               <div className="flex flex-col gap-0">
                 {candidate.experiences.map((exp, index) => (
                   <p key={index} className="text-base font-normal text-[#202333] leading-6">
-                    {exp.role} in a {exp.industry} company
+                    {t('candidates.experienceFormat', { role: exp.role, industry: exp.industry })}
                   </p>
                 ))}
               </div>
@@ -259,7 +265,10 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                 </div>
                 
                 <p className="text-base font-normal text-[#202333] leading-normal">
-                  {candidate.insights.summary}
+                  {candidate.insights.summaryIndex !== undefined ? 
+                    t(`insights.summaries[${candidate.insights.summaryIndex}]`, { years: candidate.insights.summaryYears || 5 }) :
+                    candidate.insights.summary
+                  }
                 </p>
               </div>
 
@@ -268,13 +277,13 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                 <div className="flex flex-col gap-4">
                   <h4 className="text-sm font-semibold text-[#585d72]">{t('candidateDrawer.advantages')}</h4>
                   <div className="flex flex-col gap-3">
-                    {candidate.insights.advantages.map((advantage, index) => (
+                    {(candidate.insights.advantageIndices || []).map((advantageIndex, index) => (
                       <div key={index} className="flex gap-2 items-start">
                         <div className="w-6 h-6 shrink-0 flex items-center justify-center">
                           <img alt="" className="block" src={imgAdvantage} />
                         </div>
                         <span className="text-base font-normal text-[#202333] leading-6">
-                          {advantage}
+                          {t(`insights.advantages[${advantageIndex}]`)}
                         </span>
                       </div>
                     ))}
@@ -284,13 +293,28 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                 {/* Disadvantages */}
                 <div className="flex flex-col gap-4">
                   <h4 className="text-sm font-semibold text-[#585d72]">{t('candidateDrawer.disadvantages')}</h4>
-                  <div className="flex gap-2 items-start">
-                    <div className="w-6 h-6 shrink-0 flex items-center justify-center">
-                      <img alt="" className="block" src={imgDisadvantage} />
-                    </div>
-                    <span className="text-base font-normal text-[#202333] leading-6">
-                      {candidate.insights.disadvantages[0]}
-                    </span>
+                  <div className="flex flex-col gap-3">
+                    {(candidate.insights.disadvantageIndices || []).map((disadvantageIndex, index) => (
+                      <div key={index} className="flex gap-2 items-start">
+                        <div className="w-6 h-6 shrink-0 flex items-center justify-center">
+                          <img alt="" className="block" src={imgDisadvantage} />
+                        </div>
+                        <span className="text-base font-normal text-[#202333] leading-6">
+                          {t(`insights.disadvantages[${disadvantageIndex}]`)}
+                        </span>
+                      </div>
+                    ))}
+                    {/* Fallback for old format */}
+                    {!candidate.insights.disadvantageIndices && candidate.insights.disadvantages && (
+                      <div className="flex gap-2 items-start">
+                        <div className="w-6 h-6 shrink-0 flex items-center justify-center">
+                          <img alt="" className="block" src={imgDisadvantage} />
+                        </div>
+                        <span className="text-base font-normal text-[#202333] leading-6">
+                          {candidate.insights.disadvantages[0]}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

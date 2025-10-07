@@ -21,9 +21,13 @@ export interface Contact {
 }
 
 export interface CandidateInsights {
-  summary: string
-  advantages: string[]
-  disadvantages: string[]
+  summary?: string  // Keep for backward compatibility
+  summaryIndex?: number
+  summaryYears?: number
+  advantages?: string[]  // Keep for backward compatibility
+  advantageIndices?: number[]
+  disadvantages?: string[]  // Keep for backward compatibility
+  disadvantageIndices?: number[]
 }
 
 export interface Candidate {
@@ -34,6 +38,8 @@ export interface Candidate {
   titleIndex?: number // Index for i18n title lookup
   yearsExperience: number
   currentRole: string
+  currentRoleTitle?: string  // For translation
+  currentRoleIndustry?: string  // For translation
   companyIndustry: string
   region: string
   skills: Skill[]

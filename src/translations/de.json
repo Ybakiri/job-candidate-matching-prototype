@@ -7,7 +7,6 @@
     "title": "Ihre Anzeige wird bald online sein",
     "description": "Sie haben erfolgreich eines unserer Produkte für Ihre Stellenausschreibung gebucht. Bitte überprüfen Sie Ihr Postfach für weitere Informationen.",
     "whileYouWait": "Während Sie auf Kandidaten warten",
-    "exploreApplicants": "Potenzielle Bewerber erkunden",
     "candidatesFound": "Wir haben 43 Kandidaten für Ihre",
     "position": "Position gefunden",
     "jobTitle": "CRM Manager 80%-100% (m/w/d)"
@@ -31,6 +30,7 @@
     "inviteToUnlock": "Einladen zum Entsperren",
     "invited": "Eingeladen zum Entsperren",
     "viewDetails": "Details anzeigen",
+    "viewProfile": "Profil anzeigen",
     "confirmInvitation": "Einladung bestätigen",
     "cancel": "Abbrechen",
     "continueBrowsing": "Weiter durchsuchen",
@@ -45,10 +45,14 @@
     "bestCandidates": "Die besten Kandidaten werden schnell eingestellt!",
     "contactInfo": "Kontaktinformationen",
     "education": "Bildung",
+    "moreEducation": "+{count} weitere",
     "pastExperiences": "Berufserfahrung",
+    "experienceFormat": "{role} in einem {industry} Unternehmen",
+    "moreExperiences": "+{count} weitere",
     "showInvitedOnly": "Nur eingeladene Kandidaten anzeigen",
     "profiles": "Kandidatenprofile",
-    "yearsExperience": "{years} Jahre Erfahrung"
+    "yearsExperience": "{years} Jahre Erfahrung",
+    "currentRoleFormat": "{role} in einem {industry} Unternehmen"
   },
   "stickyFooter": {
     "showInvitedOnly": "Nur eingeladene Kandidaten anzeigen",
@@ -86,6 +90,10 @@
     "advantages": "Vorteile",
     "disadvantages": "Nachteile"
   },
+  "notification": {
+    "invitationSent": "Einladung gesendet",
+    "invitationDescription": "Der Kandidat erhält eine Benachrichtigung und kann sich sofort bewerben"
+  },
   "privacy": {
     "title": "Wir respektieren die Privatsphäre der Kandidaten.",
     "description": "Kontaktdaten werden erst nach Annahme Ihrer Einladung durch die Kandidaten geteilt, um Vertrauen zu erhalten und Datenschutzbestimmungen einzuhalten.",
@@ -119,6 +127,39 @@
       "termsText": "Mit der Fortsetzung akzeptieren Sie unsere AGB und nehmen unsere Datenschutzrichtlinie zur Kenntnis.",
       "publishNow": "Jetzt veröffentlichen"
     }
+  },
+  "education": {
+    "degrees": {
+      "masterBusinessAdmin": "Master in Betriebswirtschaft",
+      "bachelorMarketing": "Bachelor in Marketing",
+      "masterMarketing": "Master in Marketing",
+      "bachelorBusinessAdmin": "Bachelor in Betriebswirtschaft",
+      "masterDigitalMarketing": "Master in Digitalem Marketing",
+      "bachelorCommunications": "Bachelor in Kommunikation"
+    }
+  },
+  "insights": {
+    "summaries": [
+      "Dieser Kandidat bringt {years} Jahre solide CRM- und Kundenbeziehungserfahrung mit starker Kompetenz in Salesforce und Marketing-Automatisierung mit. Er hat nachweislich Erfolge in der Kundenbindung und Lead-Generierung, jedoch fehlt spezifische Erfahrung in der Automobilbranche.",
+      "Mit {years} Jahren in Customer Success und CRM-Management verfügt dieser Fachmann über nachgewiesene Expertise in Kundensegmentierung und datengetriebenem Marketing. Seine branchenübergreifende Erfahrung bietet wertvolle Perspektiven für Kundenbeziehungsstrategien.",
+      "Dieser CRM-Profi kombiniert {years} Jahre praktische Erfahrung mit Kundenanalysen und Beziehungsmanagement. Er hat erfolgreich CRM-Lösungen implementiert, die Kundenbindungsraten und Vertriebskonversionen verbessert haben."
+    ],
+    "advantages": [
+      "Hat umfangreiche Erfahrung mit Salesforce und HubSpot CRM-Plattformen.",
+      "Nachgewiesene Erfolgsbilanz bei Kundenbindungs- und Abwanderungsreduzierungsstrategien.",
+      "Starke analytische Fähigkeiten mit Erfahrung in Kundensegmentierung und -targeting.",
+      "Nachgewiesener Erfolg bei E-Mail-Marketing-Kampagnen und Automatisierung.",
+      "Erfahrung in der Führung funktionsübergreifender Teams in Vertrieb und Marketing.",
+      "Ausgezeichnete Kommunikationsfähigkeiten in Deutsch, Französisch und Englisch.",
+      "Hat erfolgreich Kundendatenbanken mit über 10.000 Kontakten verwaltet.",
+      "Nachgewiesene Fähigkeit, den Customer Lifetime Value durch strategische Initiativen zu erhöhen."
+    ],
+    "disadvantages": [
+      "Begrenzte direkte Erfahrung in der Automobilindustrie und im Händlerbetrieb.",
+      "Keine formale Zertifizierung in fortgeschrittenen CRM-Plattformen wie Microsoft Dynamics.",
+      "Könnte zusätzliche Schulung in automobilspezifischer Customer Journey Mapping benötigen.",
+      "Begrenzte Erfahrung mit CRM-Integrationen auf Unternehmensebene und Datenmigration."
+    ]
   },
   "candidateTitles": {
     "titles": [

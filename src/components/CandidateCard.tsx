@@ -77,7 +77,13 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
             
             {/* Role */}
             <p className="text-sm font-medium text-[#585d72] tracking-[-0.3px] leading-[21px]">
-              {candidate.currentRole}
+              {candidate.currentRoleTitle && candidate.currentRoleIndustry ? 
+                t('candidates.currentRoleFormat', { 
+                  role: candidate.currentRoleTitle, 
+                  industry: candidate.currentRoleIndustry 
+                }) : 
+                candidate.currentRole
+              }
             </p>
             
             {/* Location */}
@@ -115,12 +121,12 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
           <div className="flex flex-col gap-1">
             {candidate.experiences.slice(0, 2).map((exp, index) => (
               <p key={index} className="text-sm font-normal text-[#202333] leading-5">
-                {exp.role} in a {exp.industry} company
+                {t('candidates.experienceFormat', { role: exp.role, industry: exp.industry })}
               </p>
             ))}
             {candidate.experiences.length > 2 && (
               <span className="text-sm font-semibold text-[#585d72]">
-                +{candidate.experiences.length - 2} more
+                {t('candidates.moreExperiences', { count: candidate.experiences.length - 2 })}
               </span>
             )}
           </div>
@@ -134,12 +140,12 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
             <div className="flex flex-col gap-1">
               {candidate.education.slice(0, 1).map((edu, index) => (
                 <p key={index} className="text-sm font-normal text-[#202333] leading-5">
-                  {edu.degree}
+                  {t(`education.degrees.${edu.degree}`)}
                 </p>
               ))}
               {candidate.education.length > 1 && (
                 <span className="text-sm font-semibold text-[#585d72]">
-                  +{candidate.education.length - 1} more
+                  {t('candidates.moreEducation', { count: candidate.education.length - 1 })}
                 </span>
               )}
             </div>
@@ -208,11 +214,12 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
             e.stopPropagation()
             onViewDetails()
           }}
-          className="w-12 h-12 border border-[#989ba8] rounded flex items-center justify-center hover:bg-gray-50 transition-colors duration-200"
+          className="flex-1 border border-[#989ba8] rounded flex items-center justify-center gap-2 px-4 py-3 hover:bg-gray-50 transition-colors duration-200"
         >
-          <div className="w-6 h-5">
+          <div className="w-5 h-4">
             <img alt="View details" className="block" src={imgEye} />
           </div>
+          <span className="text-base font-bold text-[#202333] leading-6">{t('buttons.viewProfile')}</span>
         </button>
       </div>
     </div>

@@ -33,7 +33,7 @@ const allSkills = [
   { name: 'Customer Support', matches: false },
 ]
 
-const degrees = ['Master in Business Administration', 'Bachelor in Marketing', 'Master in Marketing', 'Bachelor in Business Administration', 'Master in Digital Marketing', 'Bachelor in Communications']
+const degrees = ['masterBusinessAdmin', 'bachelorMarketing', 'masterMarketing', 'bachelorBusinessAdmin', 'masterDigitalMarketing', 'bachelorCommunications']
 const fields = ['Business Administration', 'Marketing', 'Digital Marketing', 'Communications', 'Customer Relations', 'Business Management']
 
 function generateExperiences(): { role: string; industry: string }[] {
@@ -68,37 +68,27 @@ function generateEducation(): { degree: string; field: string }[] {
   return educations
 }
 
-function generateInsights(candidate: Partial<Candidate>): { summary: string; advantages: string[]; disadvantages: string[] } {
+function generateInsights(candidate: Partial<Candidate>): { summaryIndex: number; summaryYears: number; advantageIndices: number[]; disadvantageIndices: number[] } {
   const yearsOfExp = candidate.yearsExperience || 5
   
-  const summaries = [
-    `This candidate brings ${yearsOfExp} years of solid CRM and customer relationship experience with strong proficiency in Salesforce and marketing automation. They have demonstrated success in customer retention and lead generation but lack specific automotive industry experience.`,
-    `With ${yearsOfExp} years in customer success and CRM management, this professional has proven expertise in customer segmentation and data-driven marketing. Their cross-industry experience provides valuable perspective for customer relationship strategies.`,
-    `This CRM professional combines ${yearsOfExp} years of hands-on experience with customer analytics and relationship management. They have successfully implemented CRM solutions that improved customer retention rates and sales conversion.`
-  ]
+  // We have 3 summaries, 8 advantages, and 4 disadvantages in translations
+  const summaryIndex = Math.floor(Math.random() * 3)
   
-  const advantages = [
-    'Has extensive experience with Salesforce and HubSpot CRM platforms.',
-    'Proven track record in customer retention and churn reduction strategies.',
-    'Strong analytical skills with experience in customer segmentation and targeting.',
-    'Demonstrated success in email marketing campaigns and automation.',
-    'Experience in leading cross-functional teams across sales and marketing.',
-    'Excellent communication skills in German, French, and English.',
-    'Has managed customer databases with 10,000+ contacts effectively.',
-    'Proven ability to increase customer lifetime value through strategic initiatives.'
-  ]
+  // Generate random indices for advantages (3-4 items)
+  const allAdvantageIndices = [0, 1, 2, 3, 4, 5, 6, 7]
+  const shuffledAdvantages = allAdvantageIndices.sort(() => Math.random() - 0.5)
+  const advantageIndices = shuffledAdvantages.slice(0, 3 + Math.floor(Math.random() * 2))
   
-  const disadvantages = [
-    'Limited direct experience in the automotive industry and dealership operations.',
-    'No formal certification in advanced CRM platforms like Microsoft Dynamics.',
-    'May require additional training in automotive-specific customer journey mapping.',
-    'Limited experience with enterprise-level CRM integrations and data migration.'
-  ]
+  // Generate random indices for disadvantages (1-2 items)  
+  const allDisadvantageIndices = [0, 1, 2, 3]
+  const shuffledDisadvantages = allDisadvantageIndices.sort(() => Math.random() - 0.5)
+  const disadvantageIndices = shuffledDisadvantages.slice(0, 1 + Math.floor(Math.random() * 2))
   
   return {
-    summary: summaries[Math.floor(Math.random() * summaries.length)],
-    advantages: advantages.sort(() => Math.random() - 0.5).slice(0, 3 + Math.floor(Math.random() * 2)),
-    disadvantages: disadvantages.sort(() => Math.random() - 0.5).slice(0, 1 + Math.floor(Math.random() * 2))
+    summaryIndex,
+    summaryYears: yearsOfExp,
+    advantageIndices,
+    disadvantageIndices
   }
 }
 
@@ -118,6 +108,9 @@ function generateCandidate(index: number): Candidate {
   // Use index to deterministically select title (will be localized in component)
   const titleIndex = (index - 1) % 43 // We have 43 title combinations
   
+  const currentRoleTitle = roles[Math.floor(Math.random() * roles.length)]
+  const currentRoleIndustry = industries[Math.floor(Math.random() * industries.length)]
+  
   const candidate: Partial<Candidate> = {
     id: `candidate-${index}`,
     matchScore,
@@ -125,7 +118,9 @@ function generateCandidate(index: number): Candidate {
     titleIndex, // Store index instead of actual title
     title: `${adjectives[Math.floor(Math.random() * adjectives.length)]} ${roles[Math.floor(Math.random() * roles.length)]}`, // Fallback for non-i18n usage
     yearsExperience,
-    currentRole: `${roles[Math.floor(Math.random() * roles.length)]} at a ${industries[Math.floor(Math.random() * industries.length)]} company`,
+    currentRole: `${currentRoleTitle} at a ${currentRoleIndustry} company`, // Fallback for non-i18n usage
+    currentRoleTitle, // Store separately for translation
+    currentRoleIndustry, // Store separately for translation
     companyIndustry: industries[Math.floor(Math.random() * industries.length)],
     region: regions[Math.floor(Math.random() * regions.length)],
     skills: generateSkills(),
