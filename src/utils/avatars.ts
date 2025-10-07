@@ -62,7 +62,7 @@ export function shouldShowTitleIcon(candidateId: string): boolean {
 }
 
 // Get the maximum number of skills to display for a candidate
-export function getMaxSkillsForCandidate(candidateId: string): number {
+export function getMaxSkillsForCandidate(_candidateId: string): number {
   return 4 // Show maximum 4 skills for all candidates
 }
 
