@@ -100,8 +100,8 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
                 <p className="text-sm font-semibold text-[#585d72] tracking-[-0.3px] leading-[21px]">
                   {candidate.currentRoleTitle && candidate.currentRoleIndustry ? 
                     t('candidates.currentRoleFormat', { 
-                      role: candidate.currentRoleTitle, 
-                      industry: candidate.currentRoleIndustry 
+                      role: t(`roles.${candidate.currentRoleTitle}`), 
+                      industry: t(`industries.${candidate.currentRoleIndustry}`) 
                     }) : 
                     candidate.currentRole
                   }
@@ -230,11 +230,25 @@ export function CandidateDrawer({ candidate, isOpen, onClose, onInvite }: Candid
             <div className="bg-white rounded p-4 flex flex-col gap-5">
               <h3 className="text-base font-bold text-[#202333] tracking-[-0.3px] leading-[21px]">{t('candidateDrawer.pastExperiences')}</h3>
               <div className="flex flex-col gap-0">
-                {candidate.experiences.map((exp, index) => (
-                  <p key={index} className="text-base font-normal text-[#202333] leading-6">
-                    {t('candidates.experienceFormat', { role: exp.role, industry: exp.industry })}
-                  </p>
-                ))}
+                {candidate.experiences.map((exp, index) => {
+                  // Handle "headOf_" prefix for roles
+                  let translatedRole = exp.role
+                  if (exp.role.startsWith('headOf_')) {
+                    const baseRole = exp.role.substring('headOf_'.length)
+                    translatedRole = `${t('roles.headOf')} ${t(`roles.${baseRole}`)}`
+                  } else {
+                    translatedRole = t(`roles.${exp.role}`)
+                  }
+                  
+                  return (
+                    <p key={index} className="text-base font-normal text-[#202333] leading-6">
+                      {t('candidates.experienceFormat', { 
+                        role: translatedRole, 
+                        industry: t(`industries.${exp.industry}`) 
+                      })}
+                    </p>
+                  )
+                })}
               </div>
             </div>
 

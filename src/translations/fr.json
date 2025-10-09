@@ -207,5 +207,26 @@
       "Spécialiste CRM Ventes",
       "Manager Développement Client"
     ]
+  },
+  "industries": {
+    "automotive": "automobile",
+    "telecommunications": "télécommunications",
+    "retail": "commerce de détail",
+    "financialServices": "services financiers",
+    "technology": "technologie",
+    "manufacturing": "industrie manufacturière",
+    "consulting": "conseil",
+    "ecommerce": "e-commerce",
+    "healthcare": "santé",
+    "insurance": "assurance"
+  },
+  "roles": {
+    "crmManager": "Manager CRM",
+    "customerSuccessManager": "Manager Customer Success",
+    "marketingManager": "Manager Marketing",
+    "salesManager": "Manager Ventes",
+    "customerExperienceManager": "Manager Expérience Client",
+    "businessDevelopmentManager": "Manager Développement Commercial",
+    "headOf": "Responsable de"
   }
 }

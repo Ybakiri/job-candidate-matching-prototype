@@ -71,7 +71,7 @@
     "example2": "5 Einladungen senden → 2 Kandidaten antworten = CHF 80",
     "example3": "5 Einladungen senden → 0 Kandidaten antworten = CHF 0",
     "noAnswerNoCharge": "Keine Antwort, keine Gebühr.",
-    "noChargeDescription": "Sie werden nicht belastet, wenn der Bewerber nicht antwortet, bis Ihre Stellenanzeige abläuft.",
+    "noChargeDescription": "Sie zahlen nicht, wenn der Bewerber nicht antwortet, bis Ihre Stellenanzeige abläuft.",
     "dontShowAgain": "Nicht mehr anzeigen",
     "finishTitle": "Sind Sie bereit abzuschließen?",
     "finishDescription": "Sie haben {count} Kandidaten eingeladen, sich für Ihre Position zu bewerben.",
@@ -207,5 +207,26 @@
       "Vertriebs-CRM Spezialist",
       "Kundenentwicklungsmanager"
     ]
+  },
+  "industries": {
+    "automotive": "Automobilindustrie",
+    "telecommunications": "Telekommunikation",
+    "retail": "Einzelhandel",
+    "financialServices": "Finanzdienstleistungen",
+    "technology": "Technologie",
+    "manufacturing": "Fertigung",
+    "consulting": "Beratung",
+    "ecommerce": "E-Commerce",
+    "healthcare": "Gesundheitswesen",
+    "insurance": "Versicherung"
+  },
+  "roles": {
+    "crmManager": "CRM Manager",
+    "customerSuccessManager": "Customer Success Manager",
+    "marketingManager": "Marketing Manager",
+    "salesManager": "Verkaufsleiter",
+    "customerExperienceManager": "Customer Experience Manager",
+    "businessDevelopmentManager": "Business Development Manager",
+    "headOf": "Leiter"
   }
 }

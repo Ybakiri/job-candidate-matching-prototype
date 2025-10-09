@@ -1,8 +1,8 @@
 import { Candidate, MatchScore } from '../types'
 
 const adjectives = ['Experienced', 'Strategic', 'Dynamic', 'Customer-focused', 'Results-driven', 'Innovative', 'Analytical', 'Relationship-oriented', 'Data-driven', 'Collaborative']
-const roles = ['CRM Manager', 'Customer Success Manager', 'Marketing Manager', 'Sales Manager', 'Customer Experience Manager', 'Business Development Manager']
-const industries = ['automotive', 'telecommunications', 'retail', 'financial services', 'technology', 'manufacturing', 'consulting', 'e-commerce', 'healthcare', 'insurance']
+const roles = ['crmManager', 'customerSuccessManager', 'marketingManager', 'salesManager', 'customerExperienceManager', 'businessDevelopmentManager']
+const industries = ['automotive', 'telecommunications', 'retail', 'financialServices', 'technology', 'manufacturing', 'consulting', 'ecommerce', 'healthcare', 'insurance']
 const regions = ['Zurich region', 'Bern region', 'Geneva region', 'Basel region', 'Lausanne region', 'St. Gallen region', 'Lucerne region', 'Ticino region']
 
 const allSkills = [
@@ -37,13 +37,16 @@ const degrees = ['masterBusinessAdmin', 'bachelorMarketing', 'masterMarketing', 
 const fields = ['Business Administration', 'Marketing', 'Digital Marketing', 'Communications', 'Customer Relations', 'Business Management']
 
 function generateExperiences(): { role: string; industry: string }[] {
+  const role1 = roles[Math.floor(Math.random() * roles.length)]
+  const role2 = roles[Math.floor(Math.random() * roles.length)]
+  
   return [
     {
-      role: `Head of ${roles[Math.floor(Math.random() * roles.length)]}`,
+      role: `headOf_${role1}`, // Will be translated as "Head of [role]" or "Responsable de [role]"
       industry: industries[Math.floor(Math.random() * industries.length)]
     },
     {
-      role: roles[Math.floor(Math.random() * roles.length)],
+      role: role2,
       industry: industries[Math.floor(Math.random() * industries.length)]
     }
   ]

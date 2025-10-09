@@ -207,5 +207,26 @@
       "Sales CRM Specialist",
       "Customer Development Manager"
     ]
+  },
+  "industries": {
+    "automotive": "automotive",
+    "telecommunications": "telecommunications",
+    "retail": "retail",
+    "financialServices": "financial services",
+    "technology": "technology",
+    "manufacturing": "manufacturing",
+    "consulting": "consulting",
+    "ecommerce": "e-commerce",
+    "healthcare": "healthcare",
+    "insurance": "insurance"
+  },
+  "roles": {
+    "crmManager": "CRM Manager",
+    "customerSuccessManager": "Customer Success Manager",
+    "marketingManager": "Marketing Manager",
+    "salesManager": "Sales Manager",
+    "customerExperienceManager": "Customer Experience Manager",
+    "businessDevelopmentManager": "Business Development Manager",
+    "headOf": "Head of"
   }
 }

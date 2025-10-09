@@ -79,8 +79,8 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
             <p className="text-sm font-medium text-[#585d72] tracking-[-0.3px] leading-[21px]">
               {candidate.currentRoleTitle && candidate.currentRoleIndustry ? 
                 t('candidates.currentRoleFormat', { 
-                  role: candidate.currentRoleTitle, 
-                  industry: candidate.currentRoleIndustry 
+                  role: t(`roles.${candidate.currentRoleTitle}`), 
+                  industry: t(`industries.${candidate.currentRoleIndustry}`) 
                 }) : 
                 candidate.currentRole
               }
@@ -119,11 +119,25 @@ const CandidateCard = memo(function CandidateCard({ candidate, onViewDetails, on
         <div className="border border-[#e6e6ea] rounded p-3 mb-3">
           <h4 className="text-sm font-bold text-[#202333] leading-5 mb-2">{t('candidates.pastExperiences')}</h4>
           <div className="flex flex-col gap-1">
-            {candidate.experiences.slice(0, 2).map((exp, index) => (
-              <p key={index} className="text-sm font-normal text-[#202333] leading-5">
-                {t('candidates.experienceFormat', { role: exp.role, industry: exp.industry })}
-              </p>
-            ))}
+            {candidate.experiences.slice(0, 2).map((exp, index) => {
+              // Handle "headOf_" prefix for roles
+              let translatedRole = exp.role
+              if (exp.role.startsWith('headOf_')) {
+                const baseRole = exp.role.substring('headOf_'.length)
+                translatedRole = `${t('roles.headOf')} ${t(`roles.${baseRole}`)}`
+              } else {
+                translatedRole = t(`roles.${exp.role}`)
+              }
+              
+              return (
+                <p key={index} className="text-sm font-normal text-[#202333] leading-5">
+                  {t('candidates.experienceFormat', { 
+                    role: translatedRole, 
+                    industry: t(`industries.${exp.industry}`) 
+                  })}
+                </p>
+              )
+            })}
             {candidate.experiences.length > 2 && (
               <span className="text-sm font-semibold text-[#585d72]">
                 {t('candidates.moreExperiences', { count: candidate.experiences.length - 2 })}
